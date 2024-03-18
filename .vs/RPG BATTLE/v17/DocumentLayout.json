@@ -1,0 +1,59 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Andy\\Documents\\RPG Battle\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2C657BEA-919B-4C23-8F54-01D4C9BB9230}|RPG Battle.csproj|c:\\users\\andy\\documents\\rpg battle\\scripts\\jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C657BEA-919B-4C23-8F54-01D4C9BB9230}|RPG Battle.csproj|solutionrelative:scripts\\jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 250,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Jugador.cs",
+              "DocumentMoniker": "C:\\Users\\Andy\\Documents\\RPG Battle\\Scripts\\Jugador.cs",
+              "RelativeDocumentMoniker": "Scripts\\Jugador.cs",
+              "ToolTip": "C:\\Users\\Andy\\Documents\\RPG Battle\\Scripts\\Jugador.cs",
+              "RelativeToolTip": "Scripts\\Jugador.cs",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAwwHEAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-07T22:08:03.676Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 250,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
