@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://cch548rclwodb"]
+[gd_scene load_steps=27 format=3 uid="uid://cch548rclwodb"]
 
 [ext_resource type="Texture2D" uid="uid://crh0vhymsdrgo" path="res://Assets/Characters/Basic Charakter Spritesheet.png" id="1"]
 [ext_resource type="Script" path="res://Scripts/Jugador.cs" id="1_vilhd"]
@@ -154,37 +154,22 @@ tracks/0/keys = {
 "update": 1,
 "values": [0]
 }
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_nlhfe"]
-_data = {
-"Abajo": SubResource("2"),
-"Arriba": SubResource("Animation_slieo"),
-"Derecha": SubResource("Animation_4i0su"),
-"IdleAbajo": SubResource("3"),
-"IdleArriba": SubResource("Animation_0qrk6"),
-"IdleDer": SubResource("Animation_oojy2"),
-"IdleIzq": SubResource("Animation_2qvvk"),
-"Izquierda": SubResource("Animation_qovf5"),
-"RESET": SubResource("4")
-}
-
-[sub_resource type="Animation" id="Animation_12828"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SpriteAccion:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteAccion:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
 }
 
-[sub_resource type="Animation" id="Animation_o7rhb"]
+[sub_resource type="Animation" id="Animation_a5v0q"]
 resource_name = "ararAbajo"
+length = 0.85
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -198,8 +183,9 @@ tracks/0/keys = {
 "values": [0, 1]
 }
 
-[sub_resource type="Animation" id="Animation_up7qm"]
+[sub_resource type="Animation" id="Animation_gg5t5"]
 resource_name = "ararArriba"
+length = 0.85
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -207,14 +193,15 @@ tracks/0/path = NodePath("SpriteAccion:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(-0.1, 0.3),
+"times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [2, 3]
 }
 
-[sub_resource type="Animation" id="Animation_urcm2"]
+[sub_resource type="Animation" id="Animation_utn0n"]
 resource_name = "ararDer"
+length = 0.85
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -228,8 +215,9 @@ tracks/0/keys = {
 "values": [6, 7]
 }
 
-[sub_resource type="Animation" id="Animation_enb3x"]
+[sub_resource type="Animation" id="Animation_epabv"]
 resource_name = "ararIzq"
+length = 0.85
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -243,8 +231,9 @@ tracks/0/keys = {
 "values": [4, 5]
 }
 
-[sub_resource type="Animation" id="Animation_8hkfc"]
+[sub_resource type="Animation" id="Animation_vbkkp"]
 resource_name = "atkAbajo"
+length = 0.85
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -258,8 +247,9 @@ tracks/0/keys = {
 "values": [8, 9]
 }
 
-[sub_resource type="Animation" id="Animation_wb22d"]
+[sub_resource type="Animation" id="Animation_4xlv4"]
 resource_name = "atkArriba"
+length = 0.85
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -273,8 +263,9 @@ tracks/0/keys = {
 "values": [10, 11]
 }
 
-[sub_resource type="Animation" id="Animation_ca37h"]
+[sub_resource type="Animation" id="Animation_u1ot2"]
 resource_name = "atkDer"
+length = 0.85
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -288,8 +279,9 @@ tracks/0/keys = {
 "values": [12, 13]
 }
 
-[sub_resource type="Animation" id="Animation_aobqq"]
+[sub_resource type="Animation" id="Animation_74s6v"]
 resource_name = "atkIzq"
+length = 0.85
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -303,8 +295,9 @@ tracks/0/keys = {
 "values": [14, 15]
 }
 
-[sub_resource type="Animation" id="Animation_5n0g4"]
+[sub_resource type="Animation" id="Animation_m5e2i"]
 resource_name = "regarAbajo"
+length = 0.85
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -318,8 +311,9 @@ tracks/0/keys = {
 "values": [16, 17]
 }
 
-[sub_resource type="Animation" id="Animation_c5wee"]
+[sub_resource type="Animation" id="Animation_6af8r"]
 resource_name = "regarArriba"
+length = 0.85
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -333,8 +327,9 @@ tracks/0/keys = {
 "values": [18, 19]
 }
 
-[sub_resource type="Animation" id="Animation_28cx7"]
+[sub_resource type="Animation" id="Animation_yimfh"]
 resource_name = "regarDer"
+length = 0.85
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -348,8 +343,9 @@ tracks/0/keys = {
 "values": [22, 23]
 }
 
-[sub_resource type="Animation" id="Animation_fxhe4"]
+[sub_resource type="Animation" id="Animation_bcgwv"]
 resource_name = "regarIzq"
+length = 0.85
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -363,21 +359,29 @@ tracks/0/keys = {
 "values": [20, 21]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_03oew"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nlhfe"]
 _data = {
-"RESET": SubResource("Animation_12828"),
-"ararAbajo": SubResource("Animation_o7rhb"),
-"ararArriba": SubResource("Animation_up7qm"),
-"ararDer": SubResource("Animation_urcm2"),
-"ararIzq": SubResource("Animation_enb3x"),
-"atkAbajo": SubResource("Animation_8hkfc"),
-"atkArriba": SubResource("Animation_wb22d"),
-"atkDer": SubResource("Animation_ca37h"),
-"atkIzq": SubResource("Animation_aobqq"),
-"regarAbajo": SubResource("Animation_5n0g4"),
-"regarArriba": SubResource("Animation_c5wee"),
-"regarDer": SubResource("Animation_28cx7"),
-"regarIzq": SubResource("Animation_fxhe4")
+"Abajo": SubResource("2"),
+"Arriba": SubResource("Animation_slieo"),
+"Derecha": SubResource("Animation_4i0su"),
+"IdleAbajo": SubResource("3"),
+"IdleArriba": SubResource("Animation_0qrk6"),
+"IdleDer": SubResource("Animation_oojy2"),
+"IdleIzq": SubResource("Animation_2qvvk"),
+"Izquierda": SubResource("Animation_qovf5"),
+"RESET": SubResource("4"),
+"ararAbajo": SubResource("Animation_a5v0q"),
+"ararArriba": SubResource("Animation_gg5t5"),
+"ararDer": SubResource("Animation_utn0n"),
+"ararIzq": SubResource("Animation_epabv"),
+"atkAbajo": SubResource("Animation_vbkkp"),
+"atkArriba": SubResource("Animation_4xlv4"),
+"atkDer": SubResource("Animation_u1ot2"),
+"atkIzq": SubResource("Animation_74s6v"),
+"regarAbajo": SubResource("Animation_m5e2i"),
+"regarArriba": SubResource("Animation_6af8r"),
+"regarDer": SubResource("Animation_yimfh"),
+"regarIzq": SubResource("Animation_bcgwv")
 }
 
 [sub_resource type="RectangleShape2D" id="1"]
@@ -385,11 +389,6 @@ size = Vector2(12, 14)
 
 [node name="Jugador" type="CharacterBody2D"]
 script = ExtResource("1_vilhd")
-
-[node name="SpriteJugador" type="Sprite2D" parent="."]
-texture = ExtResource("1")
-hframes = 4
-vframes = 4
 
 [node name="Animacion" type="AnimationPlayer" parent="."]
 libraries = {
@@ -403,10 +402,10 @@ texture = ExtResource("3_g0bqr")
 hframes = 2
 vframes = 12
 
-[node name="Accion" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_03oew")
-}
+[node name="SpriteJugador" type="Sprite2D" parent="."]
+texture = ExtResource("1")
+hframes = 4
+vframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("1")

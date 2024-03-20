@@ -1,4 +1,4 @@
 res://default_env.tres
 res://Scenes/Mapa1.tscn
-res://Scenes/Jugador.tscn
 res://Scripts/Jugador.cs
+res://Scenes/Jugador.tscn

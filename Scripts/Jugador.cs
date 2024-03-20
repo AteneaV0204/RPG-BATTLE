@@ -1,10 +1,10 @@
 using Godot;
+using System;
 
 public partial class Jugador : CharacterBody2D
 {
     public const float Speed = 300.0f;
     private AnimationPlayer animacion;
-    private AnimationPlayer accion;
     private Vector2 vector;
     private Sprite2D jugador;
     private Sprite2D spriteAccion;
@@ -13,7 +13,6 @@ public partial class Jugador : CharacterBody2D
     {
         // Obtener referencias a los nodos
         animacion = GetNode<AnimationPlayer>("Animacion");
-        accion = GetNode<AnimationPlayer>("Accion");
         jugador = GetNode<Sprite2D>("SpriteJugador");
         spriteAccion = GetNode<Sprite2D>("SpriteAccion");
 
@@ -114,12 +113,17 @@ public partial class Jugador : CharacterBody2D
         //No reproduce
         if (Input.IsActionJustPressed("plow"))
         {
-            jugador.Visible = false;
-            spriteAccion.Visible = true;
-            accion.Play("ararAbajo");
-            GD.Print("arar");
-            jugador.Visible = true;
-            spriteAccion.Visible = false;
+            ArarAccion();
         }
     }
+
+    private void ArarAccion()
+    {
+        jugador.Visible = false;
+        spriteAccion.Visible = true;
+
+        animacion.Play("ararAbajo");
+        GD.Print("arar");
+    }
+
 }
