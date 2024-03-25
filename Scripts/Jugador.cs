@@ -1,5 +1,4 @@
 using Godot;
-using System;
 
 public partial class Jugador : CharacterBody2D
 {
@@ -14,7 +13,6 @@ public partial class Jugador : CharacterBody2D
         // Obtener referencias a los nodos
         animacion = GetNode<AnimationPlayer>("Animacion");
         jugador = GetNode<Sprite2D>("SpriteJugador");
-        spriteAccion = GetNode<Sprite2D>("SpriteAccion");
 
         // Inicia la animación Idle cuando el juego comienza
         animacion.Play("IdleAbajo");
@@ -110,20 +108,22 @@ public partial class Jugador : CharacterBody2D
         Velocity = velocity;
         MoveAndSlide();
 
-        //No reproduce
-        if (Input.IsActionJustPressed("plow"))
+        if (Input.IsActionJustPressed("plow") && (animacion.CurrentAnimation == "IdleAbajo"))
         {
-            ArarAccion();
+            animacion.Play("ararAbajo");
         }
-    }
-
-    private void ArarAccion()
-    {
-        jugador.Visible = false;
-        spriteAccion.Visible = true;
-
-        animacion.Play("ararAbajo");
-        GD.Print("arar");
+        else if (Input.IsActionJustPressed("plow") && (animacion.CurrentAnimation == "IdleArriba"))
+        {
+            animacion.Play("ararArriba");
+        }
+        else if (Input.IsActionJustPressed("plow") && (animacion.CurrentAnimation == "IdleDer"))
+        {
+            animacion.Play("ararDer");
+        }
+        else if (Input.IsActionJustPressed("plow") && (animacion.CurrentAnimation == "IdleIzq"))
+        {
+            animacion.Play("ararIzq");
+        }
     }
 
 }

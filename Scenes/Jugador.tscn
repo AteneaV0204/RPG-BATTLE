@@ -1,8 +1,7 @@
-[gd_scene load_steps=27 format=3 uid="uid://cch548rclwodb"]
+[gd_scene load_steps=22 format=3 uid="uid://cch548rclwodb"]
 
-[ext_resource type="Texture2D" uid="uid://crh0vhymsdrgo" path="res://Assets/Characters/Basic Charakter Spritesheet.png" id="1"]
 [ext_resource type="Script" path="res://Scripts/Jugador.cs" id="1_vilhd"]
-[ext_resource type="Texture2D" uid="uid://ca2h0k55f668f" path="res://Assets/Characters/Basic Charakter Actions.png" id="3_g0bqr"]
+[ext_resource type="Texture2D" uid="uid://d7ysnhtcoljx" path="res://Assets/Characters/sprites.png" id="2_ns5nc"]
 
 [sub_resource type="Animation" id="2"]
 resource_name = "Abajo"
@@ -18,7 +17,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [2, 3]
+"values": [18, 19]
 }
 
 [sub_resource type="Animation" id="Animation_slieo"]
@@ -32,10 +31,10 @@ tracks/0/path = NodePath("SpriteJugador:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(-0.1, 0, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [4, 6, 7]
+"values": [22, 23]
 }
 
 [sub_resource type="Animation" id="Animation_4i0su"]
@@ -52,7 +51,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [14, 15]
+"values": [30, 31]
 }
 
 [sub_resource type="Animation" id="3"]
@@ -69,7 +68,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [0, 1]
+"values": [2, 3]
 }
 
 [sub_resource type="Animation" id="Animation_0qrk6"]
@@ -86,7 +85,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [4, 5]
+"values": [6, 7]
 }
 
 [sub_resource type="Animation" id="Animation_oojy2"]
@@ -103,7 +102,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [12, 13]
+"values": [14, 15]
 }
 
 [sub_resource type="Animation" id="Animation_2qvvk"]
@@ -120,7 +119,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [8, 9]
+"values": [10, 11]
 }
 
 [sub_resource type="Animation" id="Animation_qovf5"]
@@ -137,7 +136,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [10, 11]
+"values": [26, 27]
 }
 
 [sub_resource type="Animation" id="4"]
@@ -154,18 +153,6 @@ tracks/0/keys = {
 "update": 1,
 "values": [0]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("SpriteAccion:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
 
 [sub_resource type="Animation" id="Animation_a5v0q"]
 resource_name = "ararAbajo"
@@ -173,7 +160,7 @@ length = 0.85
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("SpriteAccion:frame")
+tracks/0/path = NodePath("SpriteJugador:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -189,39 +176,7 @@ length = 0.85
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("SpriteAccion:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [2, 3]
-}
-
-[sub_resource type="Animation" id="Animation_utn0n"]
-resource_name = "ararDer"
-length = 0.85
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SpriteAccion:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [6, 7]
-}
-
-[sub_resource type="Animation" id="Animation_epabv"]
-resource_name = "ararIzq"
-length = 0.85
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SpriteAccion:frame")
+tracks/0/path = NodePath("SpriteJugador:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -231,45 +186,13 @@ tracks/0/keys = {
 "values": [4, 5]
 }
 
-[sub_resource type="Animation" id="Animation_vbkkp"]
-resource_name = "atkAbajo"
+[sub_resource type="Animation" id="Animation_utn0n"]
+resource_name = "ararDer"
 length = 0.85
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("SpriteAccion:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [8, 9]
-}
-
-[sub_resource type="Animation" id="Animation_4xlv4"]
-resource_name = "atkArriba"
-length = 0.85
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SpriteAccion:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [10, 11]
-}
-
-[sub_resource type="Animation" id="Animation_u1ot2"]
-resource_name = "atkDer"
-length = 0.85
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SpriteAccion:frame")
+tracks/0/path = NodePath("SpriteJugador:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -279,29 +202,29 @@ tracks/0/keys = {
 "values": [12, 13]
 }
 
-[sub_resource type="Animation" id="Animation_74s6v"]
-resource_name = "atkIzq"
+[sub_resource type="Animation" id="Animation_epabv"]
+resource_name = "ararIzq"
 length = 0.85
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("SpriteAccion:frame")
+tracks/0/path = NodePath("SpriteJugador:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [14, 15]
+"values": [8, 9]
 }
 
-[sub_resource type="Animation" id="Animation_m5e2i"]
-resource_name = "regarAbajo"
+[sub_resource type="Animation" id="Animation_vbkkp"]
+resource_name = "atkAbajo"
 length = 0.85
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("SpriteAccion:frame")
+tracks/0/path = NodePath("SpriteJugador:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -311,45 +234,13 @@ tracks/0/keys = {
 "values": [16, 17]
 }
 
-[sub_resource type="Animation" id="Animation_6af8r"]
-resource_name = "regarArriba"
+[sub_resource type="Animation" id="Animation_4xlv4"]
+resource_name = "atkArriba"
 length = 0.85
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("SpriteAccion:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [18, 19]
-}
-
-[sub_resource type="Animation" id="Animation_yimfh"]
-resource_name = "regarDer"
-length = 0.85
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SpriteAccion:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [22, 23]
-}
-
-[sub_resource type="Animation" id="Animation_bcgwv"]
-resource_name = "regarIzq"
-length = 0.85
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SpriteAccion:frame")
+tracks/0/path = NodePath("SpriteJugador:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -357,6 +248,38 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [20, 21]
+}
+
+[sub_resource type="Animation" id="Animation_u1ot2"]
+resource_name = "atkDer"
+length = 0.85
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteJugador:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [28, 29]
+}
+
+[sub_resource type="Animation" id="Animation_74s6v"]
+resource_name = "atkIzq"
+length = 0.85
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteJugador:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [24, 25]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nlhfe"]
@@ -377,11 +300,7 @@ _data = {
 "atkAbajo": SubResource("Animation_vbkkp"),
 "atkArriba": SubResource("Animation_4xlv4"),
 "atkDer": SubResource("Animation_u1ot2"),
-"atkIzq": SubResource("Animation_74s6v"),
-"regarAbajo": SubResource("Animation_m5e2i"),
-"regarArriba": SubResource("Animation_6af8r"),
-"regarDer": SubResource("Animation_yimfh"),
-"regarIzq": SubResource("Animation_bcgwv")
+"atkIzq": SubResource("Animation_74s6v")
 }
 
 [sub_resource type="RectangleShape2D" id="1"]
@@ -396,16 +315,10 @@ libraries = {
 }
 speed_scale = 3.0
 
-[node name="SpriteAccion" type="Sprite2D" parent="."]
-visible = false
-texture = ExtResource("3_g0bqr")
-hframes = 2
-vframes = 12
-
 [node name="SpriteJugador" type="Sprite2D" parent="."]
-texture = ExtResource("1")
+texture = ExtResource("2_ns5nc")
 hframes = 4
-vframes = 4
+vframes = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("1")

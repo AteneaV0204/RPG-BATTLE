@@ -14,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 250,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -29,10 +29,6 @@
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Jugador.cs",
@@ -40,7 +36,7 @@
               "RelativeDocumentMoniker": "Scripts\\Jugador.cs",
               "ToolTip": "C:\\Users\\Andy\\Documents\\RPG Battle\\Scripts\\Jugador.cs",
               "RelativeToolTip": "Scripts\\Jugador.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAswAYAAAAmAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHwAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-07T22:08:03.676Z",
               "EditorCaption": ""
