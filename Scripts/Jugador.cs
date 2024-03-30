@@ -16,6 +16,9 @@ public partial class Jugador : CharacterBody2D
 
         // Inicia la animación Idle cuando el juego comienza
         animacion.Play("IdleAbajo");
+
+        //Ocultar raton
+        Input.MouseMode = Input.MouseModeEnum.Hidden;
     }
 
     public override void _PhysicsProcess(double delta)
@@ -28,38 +31,6 @@ public partial class Jugador : CharacterBody2D
          */
         float horizontalInput = 0f;
         float verticalInput = 0f;
-
-        if (Input.IsActionPressed("move_right")) //D
-        {
-            horizontalInput += 1;
-
-            if (animacion.CurrentAnimation != "Derecha")
-            {
-                animacion.Play("Derecha");
-            }
-
-            vector = new(1, 0);
-        }
-        else if (animacion.CurrentAnimation == "Derecha")
-        {
-            animacion.Play("IdleDer");
-        }
-
-        if (Input.IsActionPressed("move_left")) //A
-        {
-            horizontalInput -= 1;
-
-            if (animacion.CurrentAnimation != "Izquierda")
-            {
-                animacion.Play("Izquierda");
-            }
-
-            vector = new(-1, 0);
-        }
-        else if (animacion.CurrentAnimation == "Izquierda")
-        {
-            animacion.Play("IdleIzq");
-        }
 
         if (Input.IsActionPressed("move_down")) //S
         {
@@ -93,6 +64,42 @@ public partial class Jugador : CharacterBody2D
             animacion.Play("IdleArriba");
         }
 
+        if (Input.IsActionPressed("move_right") ||
+            Input.IsActionPressed("move_right") && Input.IsActionPressed("move_up") ||
+            Input.IsActionPressed("move_right") && Input.IsActionPressed("move_down")) //D
+        {
+            horizontalInput += 1;
+
+            if (animacion.CurrentAnimation != "Derecha")
+            {
+                animacion.Play("Derecha");
+            }
+
+            vector = new(1, 0);
+        }
+        else if (animacion.CurrentAnimation == "Derecha")
+        {
+            animacion.Play("IdleDer");
+        }
+
+        if (Input.IsActionPressed("move_left") || 
+            (Input.IsActionPressed("move_left") && Input.IsActionPressed("move_up")) ||
+            (Input.IsActionPressed("move_left") && Input.IsActionPressed("move_down"))) //A
+        {
+            horizontalInput -= 1;
+
+            if (animacion.CurrentAnimation != "Izquierda")
+            {
+                animacion.Play("Izquierda");
+            }
+
+            vector = new(-1, 0);
+        }
+        else if (animacion.CurrentAnimation == "Izquierda")
+        {
+            animacion.Play("IdleIzq");
+        }
+
         Vector2 direction = new(horizontalInput, verticalInput);
 
         if (direction != Vector2.Zero)
@@ -123,6 +130,14 @@ public partial class Jugador : CharacterBody2D
         else if (Input.IsActionJustPressed("plow") && (animacion.CurrentAnimation == "IdleIzq"))
         {
             animacion.Play("ararIzq");
+        }
+    }
+
+    public void _on_animation_player_animation_finished(string anim)
+    {
+        if (anim.Equals("ararAbajo"))
+        {
+            animacion.Play("IdleAbajo");
         }
     }
 

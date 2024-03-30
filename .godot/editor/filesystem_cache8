@@ -1,9 +1,9 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1711377347
-default_env.tres::Environment::7784281804771679778::1711052440::0::1::::<><>::
+::res://::1711811530
+default_env.tres::Environment::7784281804771679778::1711554729::0::1::::<><>::
 icon.png::CompressedTexture2D::7539191531000338168::1709633454::1709842153::1::::<><>::
 ::res://Assets/::1709753989
-::res://Assets/Characters/::1711280982
+::res://Assets/Characters/::1711552554
 Basic Charakter Actions.png::CompressedTexture2D::4829049803491437419::1709752401::1709842919::1::::<><>::
 Basic Charakter Spritesheet.png::CompressedTexture2D::5982058185310509398::1709752401::1709842919::1::::<><>::
 Egg_And_Nest.png::CompressedTexture2D::6503651958835543361::1709752401::1709842919::1::::<><>::
@@ -34,8 +34,8 @@ Hills.png::CompressedTexture2D::5199302144936600454::1709752401::1709842153::1::
 Tilled_Dirt.png::CompressedTexture2D::2168805750194342684::1709752401::1709842153::1::::<><>::
 Water.png::CompressedTexture2D::2440991754056668134::1709752401::1709842153::1::::<><>::
 Wooden House.png::CompressedTexture2D::1188363799261916075::1709752401::1709842153::1::::<><>::
-::res://Scenes/::1711052440
-Jugador.tscn::PackedScene::4929544756385602559::1711052440::0::1::::<><>::uid://crh0vhymsdrgo::::res://Assets/Characters/Basic Charakter Spritesheet.png<>res://Scripts/Jugador.cs<>uid://ca2h0k55f668f::::res://Assets/Characters/Basic Charakter Actions.png
-Mapa1.tscn::PackedScene::3020804654794773934::1711051872::0::1::::<><>::uid://cch548rclwodb::::res://Scenes/Jugador.tscn<>uid://blimg78706y5w::::res://Assets/Tilesets/Grass.png
-::res://Scripts/::1711051866
-Jugador.cs::CSharpScript::-1::1711051866::0::1::::<>CharacterBody2D<>::
+::res://Scenes/::1711554729
+Jugador.tscn::PackedScene::4929544756385602559::1711554729::0::1::::<><>::res://Scripts/Jugador.cs<>uid://d7ysnhtcoljx::::res://Assets/Characters/sprites.png
+Mapa1.tscn::PackedScene::3020804654794773934::1711554729::0::1::::<><>::uid://cch548rclwodb::::res://Scenes/Jugador.tscn<>uid://blimg78706y5w::::res://Assets/Tilesets/Grass.png
+::res://Scripts/::1711554755
+Jugador.cs::CSharpScript::-1::1711554755::0::1::::<>CharacterBody2D<>::
