@@ -15,13 +15,13 @@ run/main_scene="res://Scenes/Mapa1.tscn"
 config/features=PackedStringArray("4.2", "C#")
 config/icon="res://icon.png"
 
-[display]
-
-window/size/mode=3
-
 [dotnet]
 
 project/assembly_name="RPG Battle"
+
+[filesystem]
+
+import/blender/enabled=false
 
 [gui]
 

@@ -4,141 +4,79 @@ public partial class Jugador : CharacterBody2D
 {
     public const float Speed = 300.0f;
     private AnimationPlayer animacion;
-    private Vector2 vector;
+    private Vector2 direction;
+    private Vector2 velocity;
     private Sprite2D jugador;
-    private Sprite2D spriteAccion;
+    private AnimationTree tree;
 
     public override void _Ready()
     {
         // Obtener referencias a los nodos
         animacion = GetNode<AnimationPlayer>("Animacion");
         jugador = GetNode<Sprite2D>("SpriteJugador");
+        tree = GetNode<AnimationTree>("AnimationTree");
 
         // Inicia la animación Idle cuando el juego comienza
-        animacion.Play("IdleAbajo");
+        direction = Vector2.Zero;
 
         //Ocultar raton
-        Input.MouseMode = Input.MouseModeEnum.Hidden;
+        //Input.MouseMode = Input.MouseModeEnum.Hidden;
+    }
+
+    public override void _Process(double delta)
+    {
+        base._Process(delta);
+        ActualizarParametros();
     }
 
     public override void _PhysicsProcess(double delta)
     {
-        Vector2 velocity = Velocity;
+        velocity = Velocity;
 
-        /* Mueve el personaje dependiendo de la tecla 
-         * (configuración en el propio proyecto de Godot)
-         * y aplica la animacion correspondiente
-         */
-        float horizontalInput = 0f;
-        float verticalInput = 0f;
-
-        if (Input.IsActionPressed("move_down")) //S
-        {
-            verticalInput += 1;
-
-            if (animacion.CurrentAnimation != "Abajo")
-            {
-                animacion.Play("Abajo");
-            }
-
-            vector = new(0, 1);
-        }
-        else if (animacion.CurrentAnimation == "Abajo")
-        {
-            animacion.Play("IdleAbajo");
-        }
-
-        if (Input.IsActionPressed("move_up")) //W
-        {
-            verticalInput -= 1;
-
-            if (animacion.CurrentAnimation != "Arriba")
-            {
-                animacion.Play("Arriba");
-            }
-
-            vector = new(0, -1);
-        }
-        else if (animacion.CurrentAnimation == "Arriba")
-        {
-            animacion.Play("IdleArriba");
-        }
-
-        if (Input.IsActionPressed("move_right") ||
-            Input.IsActionPressed("move_right") && Input.IsActionPressed("move_up") ||
-            Input.IsActionPressed("move_right") && Input.IsActionPressed("move_down")) //D
-        {
-            horizontalInput += 1;
-
-            if (animacion.CurrentAnimation != "Derecha")
-            {
-                animacion.Play("Derecha");
-            }
-
-            vector = new(1, 0);
-        }
-        else if (animacion.CurrentAnimation == "Derecha")
-        {
-            animacion.Play("IdleDer");
-        }
-
-        if (Input.IsActionPressed("move_left") || 
-            (Input.IsActionPressed("move_left") && Input.IsActionPressed("move_up")) ||
-            (Input.IsActionPressed("move_left") && Input.IsActionPressed("move_down"))) //A
-        {
-            horizontalInput -= 1;
-
-            if (animacion.CurrentAnimation != "Izquierda")
-            {
-                animacion.Play("Izquierda");
-            }
-
-            vector = new(-1, 0);
-        }
-        else if (animacion.CurrentAnimation == "Izquierda")
-        {
-            animacion.Play("IdleIzq");
-        }
-
-        Vector2 direction = new(horizontalInput, verticalInput);
+        direction = Input.GetVector("move_left", "move_right", "move_up", "move_down").Normalized();
 
         if (direction != Vector2.Zero)
         {
-            velocity = direction.Normalized() * Speed;
+            velocity = direction * Speed;
         }
         else
         {
-            velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
-            velocity.Y = Mathf.MoveToward(Velocity.Y, 0, Speed);
+            velocity = Vector2.Zero;
         }
 
         Velocity = velocity;
         MoveAndSlide();
-
-        if (Input.IsActionJustPressed("plow") && (animacion.CurrentAnimation == "IdleAbajo"))
-        {
-            animacion.Play("ararAbajo");
-        }
-        else if (Input.IsActionJustPressed("plow") && (animacion.CurrentAnimation == "IdleArriba"))
-        {
-            animacion.Play("ararArriba");
-        }
-        else if (Input.IsActionJustPressed("plow") && (animacion.CurrentAnimation == "IdleDer"))
-        {
-            animacion.Play("ararDer");
-        }
-        else if (Input.IsActionJustPressed("plow") && (animacion.CurrentAnimation == "IdleIzq"))
-        {
-            animacion.Play("ararIzq");
-        }
     }
 
-    public void _on_animation_player_animation_finished(string anim)
+    private void ActualizarParametros()
     {
-        if (anim.Equals("ararAbajo"))
+        if(velocity == Vector2.Zero)
         {
-            animacion.Play("IdleAbajo");
+            tree.Set("parameters/conditions/idle", true);
+            tree.Set("parameters/conditions/is_moving", false);
+        } 
+        else
+        {
+            tree.Set("parameters/conditions/idle", false);
+            tree.Set("parameters/conditions/is_moving", true);
         }
+
+        if (Input.IsActionJustPressed("plow"))
+        {
+            tree.Set("parameters/conditions/arar", true);
+        }
+        else
+        {
+            tree.Set("parameters/conditions/arar", false);
+        }
+
+        if(direction != Vector2.Zero)
+        {
+            tree.Set("parameters/Idle/blend_position", direction);
+            tree.Set("parameters/Walk/blend_position", direction);
+            tree.Set("parameters/Arar/blend_position", direction);
+        }
+        
     }
 
 }

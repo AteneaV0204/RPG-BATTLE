@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cch548rclwodb"]
+[gd_scene load_steps=45 format=3 uid="uid://cch548rclwodb"]
 
 [ext_resource type="Script" path="res://Scripts/Jugador.cs" id="1_vilhd"]
 [ext_resource type="Texture2D" uid="uid://d7ysnhtcoljx" path="res://Assets/Characters/sprites.png" id="2_ns5nc"]
@@ -56,7 +56,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="3"]
 resource_name = "IdleAbajo"
-length = 3.0
+length = 0.85
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -65,7 +65,7 @@ tracks/0/path = NodePath("SpriteJugador:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5),
+"times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [2, 3]
@@ -73,7 +73,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_0qrk6"]
 resource_name = "IdleArriba"
-length = 3.0
+length = 0.85
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -82,7 +82,7 @@ tracks/0/path = NodePath("SpriteJugador:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5),
+"times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [6, 7]
@@ -90,7 +90,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_oojy2"]
 resource_name = "IdleDer"
-length = 3.0
+length = 0.85
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -99,7 +99,7 @@ tracks/0/path = NodePath("SpriteJugador:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5),
+"times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [14, 15]
@@ -107,7 +107,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_2qvvk"]
 resource_name = "IdleIzq"
-length = 3.0
+length = 0.85
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -116,7 +116,7 @@ tracks/0/path = NodePath("SpriteJugador:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5),
+"times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [10, 11]
@@ -156,7 +156,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_a5v0q"]
 resource_name = "ararAbajo"
-length = 0.85
+length = 0.65
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -164,29 +164,15 @@ tracks/0/path = NodePath("SpriteJugador:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
+"times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [0, 1]
 }
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.8),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [""],
-"method": &"_on_animation_player_animation_finished"
-}]
-}
 
 [sub_resource type="Animation" id="Animation_gg5t5"]
 resource_name = "ararArriba"
-length = 0.85
+length = 0.65
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -194,7 +180,7 @@ tracks/0/path = NodePath("SpriteJugador:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
+"times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [4, 5]
@@ -202,7 +188,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_utn0n"]
 resource_name = "ararDer"
-length = 0.85
+length = 0.65
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -210,7 +196,7 @@ tracks/0/path = NodePath("SpriteJugador:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
+"times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [12, 13]
@@ -218,7 +204,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_epabv"]
 resource_name = "ararIzq"
-length = 0.85
+length = 0.65
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -226,7 +212,7 @@ tracks/0/path = NodePath("SpriteJugador:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
+"times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [8, 9]
@@ -317,17 +303,140 @@ _data = {
 "atkIzq": SubResource("Animation_74s6v")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_e1ghc"]
+animation = &"ararIzq"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_icr1b"]
+animation = &"ararAbajo"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_n6vyi"]
+animation = &"ararDer"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_oggms"]
+animation = &"ararArriba"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_uf33y"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_e1ghc")
+blend_point_0/pos = Vector2(-1, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_icr1b")
+blend_point_1/pos = Vector2(0, 1)
+blend_point_2/node = SubResource("AnimationNodeAnimation_n6vyi")
+blend_point_2/pos = Vector2(1, 0)
+blend_point_3/node = SubResource("AnimationNodeAnimation_oggms")
+blend_point_3/pos = Vector2(0, -1)
+min_space = Vector2(-1, -1.1)
+max_space = Vector2(1, 1.1)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bh5xo"]
+animation = &"IdleIzq"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_woqmn"]
+animation = &"IdleDer"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_400eb"]
+animation = &"IdleAbajo"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7gwdh"]
+animation = &"IdleArriba"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_kxo50"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_bh5xo")
+blend_point_0/pos = Vector2(-1, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_woqmn")
+blend_point_1/pos = Vector2(1, 0)
+blend_point_2/node = SubResource("AnimationNodeAnimation_400eb")
+blend_point_2/pos = Vector2(0, 1)
+blend_point_3/node = SubResource("AnimationNodeAnimation_7gwdh")
+blend_point_3/pos = Vector2(0, -1)
+min_space = Vector2(-1, -1.1)
+max_space = Vector2(1, 1.1)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_t56so"]
+animation = &"Izquierda"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_djg5w"]
+animation = &"Abajo"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_so2v5"]
+animation = &"Derecha"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1rb27"]
+animation = &"Arriba"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_lvj1p"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_t56so")
+blend_point_0/pos = Vector2(-1, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_djg5w")
+blend_point_1/pos = Vector2(0, 1)
+blend_point_2/node = SubResource("AnimationNodeAnimation_so2v5")
+blend_point_2/pos = Vector2(1, 0)
+blend_point_3/node = SubResource("AnimationNodeAnimation_1rb27")
+blend_point_3/pos = Vector2(0, -1)
+min_space = Vector2(-1, -1.1)
+max_space = Vector2(1, 1.1)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8fkyl"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0jv4w"]
+advance_mode = 2
+advance_condition = &"is_moving"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_uo3tq"]
+advance_mode = 2
+advance_condition = &"idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jtpbd"]
+advance_mode = 2
+advance_condition = &"arar"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_drwa6"]
+switch_mode = 2
+advance_mode = 2
+advance_condition = &"idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_x6cvc"]
+switch_mode = 2
+advance_mode = 2
+advance_condition = &"is_moving"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_52y0l"]
+advance_mode = 2
+advance_condition = &"arar"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_x0h6j"]
+states/Arar/node = SubResource("AnimationNodeBlendSpace2D_uf33y")
+states/Arar/position = Vector2(417, 0.347099)
+states/End/position = Vector2(745, 94.3471)
+states/Idle/node = SubResource("AnimationNodeBlendSpace2D_kxo50")
+states/Idle/position = Vector2(289, 94.3471)
+states/Start/position = Vector2(117, 94.3471)
+states/Walk/node = SubResource("AnimationNodeBlendSpace2D_lvj1p")
+states/Walk/position = Vector2(515, 94.3471)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_8fkyl"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_0jv4w"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_uo3tq"), "Idle", "Arar", SubResource("AnimationNodeStateMachineTransition_jtpbd"), "Arar", "Idle", SubResource("AnimationNodeStateMachineTransition_drwa6"), "Arar", "Walk", SubResource("AnimationNodeStateMachineTransition_x6cvc"), "Walk", "Arar", SubResource("AnimationNodeStateMachineTransition_52y0l")]
+graph_offset = Vector2(0, -94.6529)
+
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(12, 14)
 
 [node name="Jugador" type="CharacterBody2D"]
 script = ExtResource("1_vilhd")
 
-[node name="Animacion" type="AnimationPlayer" parent="."]
+[node name="AnimationTree" type="AnimationTree" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_nlhfe")
 }
-speed_scale = 3.0
+tree_root = SubResource("AnimationNodeStateMachine_x0h6j")
+anim_player = NodePath("../Animacion")
+parameters/conditions/arar = false
+parameters/conditions/idle = false
+parameters/conditions/is_moving = false
+parameters/Arar/blend_position = Vector2(0, 0)
+parameters/Idle/blend_position = Vector2(0.374034, 0.168783)
+parameters/Walk/blend_position = Vector2(-1, 0.0174602)
 
 [node name="SpriteJugador" type="Sprite2D" parent="."]
 texture = ExtResource("2_ns5nc")
@@ -336,3 +445,9 @@ vframes = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("1")
+
+[node name="Animacion" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_nlhfe")
+}
+speed_scale = 3.0
