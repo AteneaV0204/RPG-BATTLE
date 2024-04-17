@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://c6emdhkxwphr5"]
+[gd_scene load_steps=3 format=3 uid="uid://c6emdhkxwphr5"]
 
 [ext_resource type="Texture2D" uid="uid://dv7dt7fqy3exr" path="res://Assets/Mosquete_Studios.png" id="1_v2weg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_m2s27"]
+font_size = 40
+outline_size = 2
 
 [node name="MainMenu" type="Node"]
 
@@ -41,12 +45,19 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="CanvasLayer/Control/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
+text = "Farming RPG"
+label_settings = SubResource("LabelSettings_m2s27")
+text_direction = 1
 
 [node name="Button" type="Button" parent="CanvasLayer/Control/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-
-[node name="Button2" type="Button" parent="CanvasLayer/Control/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
+action_mode = 0
+text = "Jugar"
 
 [node name="Button3" type="Button" parent="CanvasLayer/Control/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Salir"
+
+[node name="Button2" type="Button" parent="CanvasLayer/Control/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
