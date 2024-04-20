@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6emdhkxwphr5"]
+[gd_scene load_steps=4 format=3 uid="uid://c6emdhkxwphr5"]
 
 [ext_resource type="Texture2D" uid="uid://dv7dt7fqy3exr" path="res://Assets/Mosquete_Studios.png" id="1_v2weg"]
+[ext_resource type="Script" path="res://Scripts/Menu.cs" id="2_yyarh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_m2s27"]
-font_size = 40
+font_size = 43
 outline_size = 2
 
 [node name="MainMenu" type="Node"]
@@ -17,8 +18,9 @@ grow_vertical = 2
 texture = ExtResource("1_v2weg")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("2_yyarh")
 
-[node name="Control" type="Control" parent="CanvasLayer"]
+[node name="Main" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -26,7 +28,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control"]
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Main"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -34,30 +36,102 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Control/CenterContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Main/CenterContainer"]
+custom_minimum_size = Vector2(500, 250)
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/CenterContainer/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Main/CenterContainer/PanelContainer"]
 layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/CenterContainer/PanelContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer"]
 layout_mode = 2
+theme_override_constants/separation = 5
 
-[node name="Label" type="Label" parent="CanvasLayer/Control/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="NombreJuego" type="Label" parent="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 text = "Farming RPG"
 label_settings = SubResource("LabelSettings_m2s27")
+horizontal_alignment = 1
+vertical_alignment = 1
 text_direction = 1
 
-[node name="Button" type="Button" parent="CanvasLayer/Control/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="BtnJugar" type="Button" parent="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 action_mode = 0
 text = "Jugar"
 
-[node name="Button3" type="Button" parent="CanvasLayer/Control/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="BtnAjustes" type="Button" parent="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
+text = "Ajustes"
+
+[node name="BtnSalir" type="Button" parent="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
 text = "Salir"
 
-[node name="Button2" type="Button" parent="CanvasLayer/Control/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="Ajustes" type="Control" parent="CanvasLayer"]
 visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Ajustes"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Ajustes/CenterContainer"]
+custom_minimum_size = Vector2(500, 200)
 layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Ajustes/CenterContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Ajustes/CenterContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Ajustes" type="Label" parent="CanvasLayer/Ajustes/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Ajustes"
+label_settings = SubResource("LabelSettings_m2s27")
+horizontal_alignment = 1
+vertical_alignment = 1
+text_direction = 1
+
+[node name="Placeholder" type="Label" parent="CanvasLayer/Ajustes/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Añadir settings"
+label_settings = SubResource("LabelSettings_m2s27")
+horizontal_alignment = 1
+vertical_alignment = 1
+text_direction = 1
+
+[node name="BtnAtras" type="Button" parent="CanvasLayer/Ajustes/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Atras"
+
+[connection signal="pressed" from="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/BtnJugar" to="CanvasLayer" method="_OnBtnJugarPressed"]
+[connection signal="pressed" from="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/BtnAjustes" to="CanvasLayer" method="_OnBtnAjustesPressed"]
+[connection signal="pressed" from="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/BtnSalir" to="CanvasLayer" method="_onBtnSalirPressed"]
+[connection signal="pressed" from="CanvasLayer/Ajustes/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/BtnAtras" to="CanvasLayer" method="_OnBtnAtrasPressed"]

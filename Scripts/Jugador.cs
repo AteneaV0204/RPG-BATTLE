@@ -6,8 +6,10 @@ public partial class Jugador : CharacterBody2D
     private AnimationPlayer animacion;
     private Vector2 direction;
     private Vector2 velocity;
+    private Vector2 characterPos;
     private Sprite2D jugador;
     private AnimationTree tree;
+    private CharacterBody2D characterBody;
 
     public override void _Ready()
     {
@@ -16,7 +18,6 @@ public partial class Jugador : CharacterBody2D
         jugador = GetNode<Sprite2D>("SpriteJugador");
         tree = GetNode<AnimationTree>("AnimationTree");
 
-        // Inicia la animación Idle cuando el juego comienza
         direction = Vector2.Zero;
 
         //Ocultar raton
@@ -64,6 +65,7 @@ public partial class Jugador : CharacterBody2D
         if (Input.IsActionJustPressed("plow"))
         {
             tree.Set("parameters/conditions/arar", true);
+            characterPos = this.Position;
         }
         else
         {
@@ -77,6 +79,11 @@ public partial class Jugador : CharacterBody2D
             tree.Set("parameters/Arar/blend_position", direction);
         }
         
+    }
+
+    public Vector2 GetCharacterPosition()
+    {
+        return characterPos;
     }
 
 }
