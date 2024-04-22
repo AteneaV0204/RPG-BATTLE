@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dv7dt7fqy3exr"
-path="res://.godot/imported/Mosquete_Studios.png-db3fb5c079d46a77311f70c09cd6ee4a.ctex"
+uid="uid://cpshvdi4fcwyk"
+path="res://.godot/imported/Fondo.png-c37b6b841be5c5720dff0c1e323ddc45.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Mosquete_Studios.png"
-dest_files=["res://.godot/imported/Mosquete_Studios.png-db3fb5c079d46a77311f70c09cd6ee4a.ctex"]
+source_file="res://Assets/Fondo.png"
+dest_files=["res://.godot/imported/Fondo.png-c37b6b841be5c5720dff0c1e323ddc45.ctex"]
 
 [params]
 

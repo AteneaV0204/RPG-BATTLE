@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="RPG Battle"
-run/main_scene="res://Scenes/Mapa1.tscn"
+run/main_scene="res://Scenes/MainMenu.tscn"
 config/features=PackedStringArray("4.2", "C#")
+boot_splash/show_image=false
 config/icon="res://icon.png"
+
+[display]
+
+window/size/mode=3
 
 [dotnet]
 

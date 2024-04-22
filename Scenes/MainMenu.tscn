@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6emdhkxwphr5"]
+[gd_scene load_steps=5 format=3 uid="uid://c6emdhkxwphr5"]
 
-[ext_resource type="Texture2D" uid="uid://dv7dt7fqy3exr" path="res://Assets/Mosquete_Studios.png" id="1_v2weg"]
+[ext_resource type="Texture2D" uid="uid://cpshvdi4fcwyk" path="res://Assets/Fondo.png" id="1_3x5wy"]
 [ext_resource type="Script" path="res://Scripts/Menu.cs" id="2_yyarh"]
+[ext_resource type="Theme" uid="uid://bpbe18lbgtft" path="res://Scenes/menu.tres" id="3_3admr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_m2s27"]
 font_size = 43
@@ -15,7 +16,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_v2weg")
+texture = ExtResource("1_3x5wy")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("2_yyarh")
@@ -27,6 +28,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_3admr")
 
 [node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Main"]
 layout_mode = 1
@@ -84,6 +86,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_3admr")
 
 [node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Ajustes"]
 layout_mode = 1
@@ -120,7 +123,7 @@ text_direction = 1
 [node name="Placeholder" type="Label" parent="CanvasLayer/Ajustes/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-text = "Añadir settings"
+text = "No implementado"
 label_settings = SubResource("LabelSettings_m2s27")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -133,5 +136,5 @@ text = "Atras"
 
 [connection signal="pressed" from="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/BtnJugar" to="CanvasLayer" method="_OnBtnJugarPressed"]
 [connection signal="pressed" from="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/BtnAjustes" to="CanvasLayer" method="_OnBtnAjustesPressed"]
-[connection signal="pressed" from="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/BtnSalir" to="CanvasLayer" method="_onBtnSalirPressed"]
+[connection signal="button_down" from="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/BtnSalir" to="CanvasLayer" method="_OnBtnSalirPressed"]
 [connection signal="pressed" from="CanvasLayer/Ajustes/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/BtnAtras" to="CanvasLayer" method="_OnBtnAtrasPressed"]
