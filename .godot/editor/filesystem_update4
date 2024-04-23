@@ -1,8 +1,5 @@
 res://default_env.tres
-res://Scenes/Mapa1.tscn
+res://Scenes/Ajustes.tscn
 res://Scripts/Jugador.cs
-res://Scenes/Jugador.tscn
-res://Scenes/MainMenu.tscn
-res://Scripts/Mapa1.cs
 res://Scripts/Menu.cs
-res://Scenes/menu.tres
+res://Scenes/MainMenu.tscn

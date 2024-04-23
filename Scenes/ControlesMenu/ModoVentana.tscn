@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dptwfjqdom66x"]
+
+[ext_resource type="PackedScene" uid="uid://nrgbmyqseqrg" path="res://Scenes/ControlesMenu/ComboOpciones.tscn" id="1_vn0tt"]
+[ext_resource type="Script" path="res://Scripts/ModoVentana.cs" id="2_82g6p"]
+
+[node name="ModoVentana" instance=ExtResource("1_vn0tt")]
+script = ExtResource("2_82g6p")
+
+[node name="Label" parent="HBoxContainer" index="0"]
+text = "Modo Ventana"

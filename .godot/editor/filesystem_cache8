@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1713781393
-default_env.tres::Environment::7784281804771679778::1713781353::0::1::::<><>::
+::res://::1713904931
+default_env.tres::Environment::7784281804771679778::1713872666::0::1::::<><>::
 icon.png::CompressedTexture2D::7539191531000338168::1709637054::1709845753::1::::<><>::
 ::res://Assets/::1713781359
 Fondo.png::CompressedTexture2D::5863295513404031506::1713781297::1713781300::1::::<><>::
@@ -35,11 +35,19 @@ Hills.png::CompressedTexture2D::5199302144936600454::1709756001::1709845753::1::
 Tilled_Dirt.png::CompressedTexture2D::2168805750194342684::1709756001::1709845753::1::::<><>::
 Water.png::CompressedTexture2D::2440991754056668134::1709756001::1709845753::1::::<><>::
 Wooden House.png::CompressedTexture2D::1188363799261916075::1709756001::1709845753::1::::<><>::
-::res://Scenes/::1713781353
-Jugador.tscn::PackedScene::4929544756385602559::1713381697::0::1::::<><>::res://Scripts/Jugador.cs<>uid://d7ysnhtcoljx::::res://Assets/Characters/sprites.png
-MainMenu.tscn::PackedScene::6957687376662864948::1713781353::0::1::::<><>::uid://cpshvdi4fcwyk::::res://Assets/Fondo.png<>res://Scripts/Menu.cs
-Mapa1.tscn::PackedScene::3020804654794773934::1713381696::0::1::::<><>::uid://cch548rclwodb::::res://Scenes/Jugador.tscn<>uid://55t6cnsihb4g::::res://Assets/Tilesets/Tilled_Dirt.png<>res://Scripts/Mapa1.cs<>uid://blimg78706y5w::::res://Assets/Tilesets/Grass.png
-::res://Scripts/::1713781353
-Jugador.cs::CSharpScript::-1::1713781353::0::1::::<>CharacterBody2D<>::
+::res://Scenes/::1713872666
+Ajustes.tscn::PackedScene::3685989367444602104::1713872666::0::1::::<><>::
+Jugador.tscn::PackedScene::4929544756385602559::1713871940::0::1::::<><>::res://Scripts/Jugador.cs<>uid://d7ysnhtcoljx::::res://Assets/Characters/sprites.png
+MainMenu.tscn::PackedScene::6957687376662864948::1713872662::0::1::::<><>::uid://cpshvdi4fcwyk::::res://Assets/Fondo.png<>res://Scripts/Menu.cs<>uid://bpbe18lbgtft::::res://Scenes/menu.tres
+Mapa1.tscn::PackedScene::3020804654794773934::1713871940::0::1::::<><>::uid://cch548rclwodb::::res://Scenes/Jugador.tscn<>uid://55t6cnsihb4g::::res://Assets/Tilesets/Tilled_Dirt.png<>res://Scripts/Mapa1.cs<>uid://blimg78706y5w::::res://Assets/Tilesets/Grass.png
+menu.tres::Theme::101223787204348521::1713785276::0::1::::<><>::
+::res://Scenes/ControlesMenu/::1713871941
+AjustesTab.tscn::PackedScene::1698461406482612893::1713871941::0::1::::<><>::uid://dptwfjqdom66x::::res://Scenes/ControlesMenu/ModoVentana.tscn
+ComboOpciones.tscn::PackedScene::947916144970645704::1713871941::0::1::::<><>::
+ModoVentana.tscn::PackedScene::8252663083369856849::1713871941::0::1::::<><>::uid://nrgbmyqseqrg::::res://Scenes/ControlesMenu/ComboOpciones.tscn<>res://Scripts/ModoVentana.cs
+Resolucion.tscn::PackedScene::2384517065749008252::1713871941::0::1::::<><>::uid://nrgbmyqseqrg::::res://Scenes/ControlesMenu/ComboOpciones.tscn
+::res://Scripts/::1713871959
+Jugador.cs::CSharpScript::-1::1713871580::0::1::::<>CharacterBody2D<>::
 Mapa1.cs::CSharpScript::-1::1713376701::0::1::::<>Node2D<>::
-Menu.cs::CSharpScript::-1::1713381714::0::1::::<>CanvasLayer<>::
+Menu.cs::CSharpScript::-1::1713871959::0::1::::<>CanvasLayer<>::
+ModoVentana.cs::CSharpScript::-1::1713871150::0::1::::<>Control<>::

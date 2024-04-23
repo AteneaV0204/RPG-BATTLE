@@ -27,15 +27,4 @@ public partial class Menu : CanvasLayer
     {
         GetTree().Quit();
     }
-
-    public void _OnBtnAtrasPressed()
-    {
-        main.Visible = true;
-        ajustes.Visible = false;
-    }
-
-    //Called every frame. 'delta' is the elapsed time since the previous frame.
-    //public override void _Process(double delta)
-    //{
-    //}
 }
