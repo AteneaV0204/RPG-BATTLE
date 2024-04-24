@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Andy\\Documents\\RPG Battle\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Andy\\Documents\\RPG Battle\\Scenes\\Ajustes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Scenes\\Ajustes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2C657BEA-919B-4C23-8F54-01D4C9BB9230}|RPG Battle.csproj|c:\\users\\andy\\documents\\rpg battle\\scripts\\jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C657BEA-919B-4C23-8F54-01D4C9BB9230}|RPG Battle.csproj|solutionrelative:scripts\\jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2C657BEA-919B-4C23-8F54-01D4C9BB9230}|RPG Battle.csproj|c:\\users\\andy\\documents\\rpg battle\\scripts\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C657BEA-919B-4C23-8F54-01D4C9BB9230}|RPG Battle.csproj|solutionrelative:scripts\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C657BEA-919B-4C23-8F54-01D4C9BB9230}|RPG Battle.csproj|c:\\users\\andy\\documents\\rpg battle\\scripts\\modoventana.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C657BEA-919B-4C23-8F54-01D4C9BB9230}|RPG Battle.csproj|solutionrelative:scripts\\modoventana.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2C657BEA-919B-4C23-8F54-01D4C9BB9230}|RPG Battle.csproj|c:\\users\\andy\\documents\\rpg battle\\scripts\\mapa1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C657BEA-919B-4C23-8F54-01D4C9BB9230}|RPG Battle.csproj|solutionrelative:scripts\\mapa1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C657BEA-919B-4C23-8F54-01D4C9BB9230}|RPG Battle.csproj|c:\\users\\andy\\documents\\rpg battle\\scripts\\jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C657BEA-919B-4C23-8F54-01D4C9BB9230}|RPG Battle.csproj|solutionrelative:scripts\\jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 250,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,46 +38,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Ajustes.cs",
-              "DocumentMoniker": "C:\\Users\\Andy\\Documents\\RPG Battle\\Scenes\\Ajustes.cs",
-              "RelativeDocumentMoniker": "Scenes\\Ajustes.cs",
-              "ToolTip": "C:\\Users\\Andy\\Documents\\RPG Battle\\Scenes\\Ajustes.cs",
-              "RelativeToolTip": "Scenes\\Ajustes.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T20:54:58.433Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ModoVentana.cs",
-              "DocumentMoniker": "C:\\Users\\Andy\\Documents\\RPG Battle\\Scripts\\ModoVentana.cs",
-              "RelativeDocumentMoniker": "Scripts\\ModoVentana.cs",
-              "ToolTip": "C:\\Users\\Andy\\Documents\\RPG Battle\\Scripts\\ModoVentana.cs",
-              "RelativeToolTip": "Scripts\\ModoVentana.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T10:28:10.329Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Menu.cs",
               "DocumentMoniker": "C:\\Users\\Andy\\Documents\\RPG Battle\\Scripts\\Menu.cs",
               "RelativeDocumentMoniker": "Scripts\\Menu.cs",
               "ToolTip": "C:\\Users\\Andy\\Documents\\RPG Battle\\Scripts\\Menu.cs",
               "RelativeToolTip": "Scripts\\Menu.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAArAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAADEAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-17T18:55:13.274Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Mapa1.cs",
               "DocumentMoniker": "C:\\Users\\Andy\\Documents\\RPG Battle\\Scripts\\Mapa1.cs",
               "RelativeDocumentMoniker": "Scripts\\Mapa1.cs",
@@ -97,15 +63,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Jugador.cs",
               "DocumentMoniker": "C:\\Users\\Andy\\Documents\\RPG Battle\\Scripts\\Jugador.cs",
               "RelativeDocumentMoniker": "Scripts\\Jugador.cs",
               "ToolTip": "C:\\Users\\Andy\\Documents\\RPG Battle\\Scripts\\Jugador.cs",
               "RelativeToolTip": "Scripts\\Jugador.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEIAAAA5AAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAAAQwEQAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T22:08:03.676Z"
+              "WhenOpened": "2024-03-07T22:08:03.676Z",
+              "EditorCaption": ""
             }
           ]
         },

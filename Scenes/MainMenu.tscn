@@ -24,6 +24,7 @@ texture = ExtResource("1_3x5wy")
 script = ExtResource("2_yyarh")
 
 [node name="Main" type="Control" parent="CanvasLayer"]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -81,6 +82,112 @@ layout_mode = 2
 size_flags_vertical = 3
 text = "Salir"
 
+[node name="Ajustes" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/Ajustes"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Ajustes/MarginContainer2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 43
+text = "Ajustes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AjustesTab" type="Control" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TabContainer" type="TabContainer" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 100.0
+offset_top = 50.0
+offset_right = -100.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_alignment = 1
+
+[node name="Graficos" type="TabBar" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 20
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="ModoVentana" type="Control" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/ScrollContainer/VBoxContainer/ModoVentana"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/ScrollContainer/VBoxContainer/ModoVentana/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Modo Ventana"
+
+[node name="VSeparator" type="VSeparator" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/ScrollContainer/VBoxContainer/ModoVentana/HBoxContainer"]
+layout_mode = 2
+
+[node name="OptionButton" type="OptionButton" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/ScrollContainer/VBoxContainer/ModoVentana/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="Sonido" type="TabBar" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Accesibilidad" type="TabBar" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Salir" type="Button" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "Atras"
+
 [connection signal="pressed" from="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/BtnJugar" to="CanvasLayer" method="_OnBtnJugarPressed"]
 [connection signal="pressed" from="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/BtnAjustes" to="CanvasLayer" method="_OnBtnAjustesPressed"]
 [connection signal="button_down" from="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/BtnSalir" to="CanvasLayer" method="_OnBtnSalirPressed"]
+[connection signal="pressed" from="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/Salir" to="CanvasLayer" method="_OnBtnAtrasPressed"]

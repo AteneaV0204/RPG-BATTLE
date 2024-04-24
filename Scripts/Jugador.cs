@@ -47,6 +47,8 @@ public partial class Jugador : CharacterBody2D
 
         Velocity = velocity;
         MoveAndSlide();
+
+        characterPos = this.Position;
     }
 
     private void ActualizarParametros()
@@ -65,7 +67,6 @@ public partial class Jugador : CharacterBody2D
         if (Input.IsActionJustPressed("plow"))
         {
             tree.Set("parameters/conditions/arar", true);
-            characterPos = this.Position;
         }
         else
         {

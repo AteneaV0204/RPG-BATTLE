@@ -1,10 +1,75 @@
-[gd_scene load_steps=3 format=3 uid="uid://dptwfjqdom66x"]
+[gd_scene load_steps=2 format=3 uid="uid://nrgbmyqseqrg"]
 
-[ext_resource type="PackedScene" uid="uid://nrgbmyqseqrg" path="res://Scenes/ControlesMenu/ComboOpciones.tscn" id="1_vn0tt"]
-[ext_resource type="Script" path="res://Scripts/ModoVentana.cs" id="2_82g6p"]
+[sub_resource type="CSharpScript" id="CSharpScript_0pf0x"]
+script/source = "using Godot;
+using System;
 
-[node name="ModoVentana" instance=ExtResource("1_vn0tt")]
-script = ExtResource("2_82g6p")
+public partial class ModoVentana : Control
+{
+	private OptionButton ventana;
+    private const string fullscreen = \"Pantalla completa\";
+    private const string max = \"Maximizado\";
+    private const string min = \"Minimizado\";
+    private static readonly string[] ARRAY_MODO_VENTANA = { fullscreen, max, min };
 
-[node name="Label" parent="HBoxContainer" index="0"]
+    public override void _Ready()
+	{
+        ventana = GetNode<OptionButton>(\"ComboBox\");
+        AgregarItems();
+        ventana.ItemSelected += OnWindowModeSelected;
+	}
+
+    private void AgregarItems()
+    {
+        foreach (string item in ARRAY_MODO_VENTANA)
+        {
+            ventana.AddItem(item);
+        }
+    }
+
+    private void OnWindowModeSelected(long index)
+    {
+        switch (index)
+        {
+            case 0: //Pantalla completa
+                DisplayServer.WindowSetMode(DisplayServer.WindowMode.Fullscreen);
+                break;
+            case 1: //Maximizado
+                DisplayServer.WindowSetMode(DisplayServer.WindowMode.Maximized);
+                break;
+            case 2: //Minimizado
+                DisplayServer.WindowSetMode(DisplayServer.WindowMode.Minimized);
+                break;
+
+        }
+    }
+}
+"
+
+[node name="ModoVentana" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("CSharpScript_0pf0x")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
 text = "Modo Ventana"
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="ComboBox" type="OptionButton" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
