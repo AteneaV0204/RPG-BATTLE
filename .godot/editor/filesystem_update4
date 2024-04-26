@@ -4,6 +4,7 @@ res://Scripts/Jugador.cs
 res://Scripts/Menu.cs
 res://Scenes/Jugador.tscn
 res://Scenes/MainMenu.tscn
-res://Scenes/ControlesMenu/Resolucion.tscn
-res://Scenes/ControlesMenu/ModoVentana.tscn
 res://Scripts/Mapa1.cs
+res://Scenes/ModoVentana.cs
+res://Scripts/ModoVentana.cs
+res://Scripts/Resolucion.cs

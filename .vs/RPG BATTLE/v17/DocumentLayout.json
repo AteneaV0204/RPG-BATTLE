@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Andy\\Documents\\RPG Battle\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2C657BEA-919B-4C23-8F54-01D4C9BB9230}|RPG Battle.csproj|c:\\users\\andy\\documents\\rpg battle\\scripts\\resolucion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C657BEA-919B-4C23-8F54-01D4C9BB9230}|RPG Battle.csproj|solutionrelative:scripts\\resolucion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C657BEA-919B-4C23-8F54-01D4C9BB9230}|RPG Battle.csproj|c:\\users\\andy\\documents\\rpg battle\\scripts\\modoventana.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C657BEA-919B-4C23-8F54-01D4C9BB9230}|RPG Battle.csproj|solutionrelative:scripts\\modoventana.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2C657BEA-919B-4C23-8F54-01D4C9BB9230}|RPG Battle.csproj|c:\\users\\andy\\documents\\rpg battle\\scripts\\mapa1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C657BEA-919B-4C23-8F54-01D4C9BB9230}|RPG Battle.csproj|solutionrelative:scripts\\mapa1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2C657BEA-919B-4C23-8F54-01D4C9BB9230}|RPG Battle.csproj|c:\\users\\andy\\documents\\rpg battle\\scripts\\jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C657BEA-919B-4C23-8F54-01D4C9BB9230}|RPG Battle.csproj|solutionrelative:scripts\\jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C657BEA-919B-4C23-8F54-01D4C9BB9230}|RPG Battle.csproj|c:\\users\\andy\\documents\\rpg battle\\scripts\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C657BEA-919B-4C23-8F54-01D4C9BB9230}|RPG Battle.csproj|solutionrelative:scripts\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 250,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,41 +42,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Menu.cs",
-              "DocumentMoniker": "C:\\Users\\Andy\\Documents\\RPG Battle\\Scripts\\Menu.cs",
-              "RelativeDocumentMoniker": "Scripts\\Menu.cs",
-              "ToolTip": "C:\\Users\\Andy\\Documents\\RPG Battle\\Scripts\\Menu.cs",
-              "RelativeToolTip": "Scripts\\Menu.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAADEAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T18:55:13.274Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Mapa1.cs",
-              "DocumentMoniker": "C:\\Users\\Andy\\Documents\\RPG Battle\\Scripts\\Mapa1.cs",
-              "RelativeDocumentMoniker": "Scripts\\Mapa1.cs",
-              "ToolTip": "C:\\Users\\Andy\\Documents\\RPG Battle\\Scripts\\Mapa1.cs",
-              "RelativeToolTip": "Scripts\\Mapa1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAMAAAA",
+              "Title": "Resolucion.cs",
+              "DocumentMoniker": "C:\\Users\\Andy\\Documents\\RPG Battle\\Scripts\\Resolucion.cs",
+              "RelativeDocumentMoniker": "Scripts\\Resolucion.cs",
+              "ToolTip": "C:\\Users\\Andy\\Documents\\RPG Battle\\Scripts\\Resolucion.cs",
+              "RelativeToolTip": "Scripts\\Resolucion.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAADwvxsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T19:40:00.27Z",
+              "WhenOpened": "2024-04-26T12:20:15.75Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ModoVentana.cs",
+              "DocumentMoniker": "C:\\Users\\Andy\\Documents\\RPG Battle\\Scripts\\ModoVentana.cs",
+              "RelativeDocumentMoniker": "Scripts\\ModoVentana.cs",
+              "ToolTip": "C:\\Users\\Andy\\Documents\\RPG Battle\\Scripts\\ModoVentana.cs",
+              "RelativeToolTip": "Scripts\\ModoVentana.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T12:08:14.637Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Mapa1.cs",
+              "DocumentMoniker": "C:\\Users\\Andy\\Documents\\RPG Battle\\Scripts\\Mapa1.cs",
+              "RelativeDocumentMoniker": "Scripts\\Mapa1.cs",
+              "ToolTip": "C:\\Users\\Andy\\Documents\\RPG Battle\\Scripts\\Mapa1.cs",
+              "RelativeToolTip": "Scripts\\Mapa1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T19:40:00.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Jugador.cs",
               "DocumentMoniker": "C:\\Users\\Andy\\Documents\\RPG Battle\\Scripts\\Jugador.cs",
               "RelativeDocumentMoniker": "Scripts\\Jugador.cs",
               "ToolTip": "C:\\Users\\Andy\\Documents\\RPG Battle\\Scripts\\Jugador.cs",
               "RelativeToolTip": "Scripts\\Jugador.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAQwEQAAAA5AAAA",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAxwBcAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T22:08:03.676Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-07T22:08:03.676Z"
             }
           ]
         },

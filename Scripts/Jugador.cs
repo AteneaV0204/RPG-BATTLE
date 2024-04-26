@@ -21,7 +21,7 @@ public partial class Jugador : CharacterBody2D
         direction = Vector2.Zero;
 
         //Ocultar raton
-        //Input.MouseMode = Input.MouseModeEnum.Hidden;
+        Input.MouseMode = Input.MouseModeEnum.Hidden;
     }
 
     public override void _Process(double delta)
@@ -53,11 +53,11 @@ public partial class Jugador : CharacterBody2D
 
     private void ActualizarParametros()
     {
-        if(velocity == Vector2.Zero)
+        if (velocity == Vector2.Zero)
         {
             tree.Set("parameters/conditions/idle", true);
             tree.Set("parameters/conditions/is_moving", false);
-        } 
+        }
         else
         {
             tree.Set("parameters/conditions/idle", false);
@@ -73,13 +73,13 @@ public partial class Jugador : CharacterBody2D
             tree.Set("parameters/conditions/arar", false);
         }
 
-        if(direction != Vector2.Zero)
+        if (direction != Vector2.Zero)
         {
             tree.Set("parameters/Idle/blend_position", direction);
             tree.Set("parameters/Walk/blend_position", direction);
             tree.Set("parameters/Arar/blend_position", direction);
         }
-        
+
     }
 
     public Vector2 GetCharacterPosition()

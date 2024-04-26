@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://c6emdhkxwphr5"]
+[gd_scene load_steps=8 format=3 uid="uid://c6emdhkxwphr5"]
 
 [ext_resource type="Texture2D" uid="uid://cpshvdi4fcwyk" path="res://Assets/Fondo.png" id="1_3x5wy"]
 [ext_resource type="Script" path="res://Scripts/Menu.cs" id="2_yyarh"]
 [ext_resource type="Theme" uid="uid://bpbe18lbgtft" path="res://Scenes/menu.tres" id="3_3admr"]
+[ext_resource type="Script" path="res://Scripts/ModoVentana.cs" id="4_61hxe"]
+[ext_resource type="Script" path="res://Scripts/Resolucion.cs" id="5_veqik"]
 
 [sub_resource type="SystemFont" id="SystemFont_bb4lj"]
 
@@ -24,6 +26,7 @@ texture = ExtResource("1_3x5wy")
 script = ExtResource("2_yyarh")
 
 [node name="Main" type="Control" parent="CanvasLayer"]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -82,7 +85,6 @@ size_flags_vertical = 3
 text = "Salir"
 
 [node name="Ajustes" type="Control" parent="CanvasLayer"]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -152,27 +154,56 @@ layout_mode = 2
 theme_override_constants/separation = 40
 alignment = 1
 
-[node name="ModoVentana" type="Control" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/ScrollContainer/VBoxContainer"]
+[node name="ModoVentana" type="HBoxContainer" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/ScrollContainer/VBoxContainer/ModoVentana"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
 theme_override_constants/separation = 16
+script = ExtResource("4_61hxe")
 
-[node name="Label" type="Label" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/ScrollContainer/VBoxContainer/ModoVentana/HBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/ScrollContainer/VBoxContainer/ModoVentana"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Modo Ventana"
 
-[node name="VSeparator" type="VSeparator" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/ScrollContainer/VBoxContainer/ModoVentana/HBoxContainer"]
+[node name="VSeparator" type="VSeparator" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/ScrollContainer/VBoxContainer/ModoVentana"]
 layout_mode = 2
 
-[node name="OptionButton" type="OptionButton" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/ScrollContainer/VBoxContainer/ModoVentana/HBoxContainer"]
-custom_minimum_size = Vector2(200, 0)
+[node name="Fullscreen" type="Button" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/ScrollContainer/VBoxContainer/ModoVentana"]
 layout_mode = 2
+text = "Pantalla completa"
+
+[node name="Maximizado" type="Button" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/ScrollContainer/VBoxContainer/ModoVentana"]
+layout_mode = 2
+text = "Maximizado"
+
+[node name="Ventana" type="Button" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/ScrollContainer/VBoxContainer/ModoVentana"]
+layout_mode = 2
+text = "Ventana"
+
+[node name="Resolucion" type="HBoxContainer" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("5_veqik")
+
+[node name="Label" type="Label" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/ScrollContainer/VBoxContainer/Resolucion"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Resolucion"
+
+[node name="VSeparator" type="VSeparator" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/ScrollContainer/VBoxContainer/Resolucion"]
+layout_mode = 2
+theme_override_constants/separation = 27
+
+[node name="Resoluciones" type="OptionButton" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/ScrollContainer/VBoxContainer/Resolucion"]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+tooltip_text = "Cambiar la resolucion de la pantalla"
+
+[node name="Aclaración" type="Label" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/ScrollContainer/VBoxContainer/Resolucion"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "(solo en modo ventana)"
 
 [node name="Sonido" type="TabBar" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer"]
 visible = false
@@ -190,4 +221,7 @@ text = "Atras"
 [connection signal="pressed" from="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/BtnJugar" to="CanvasLayer" method="_OnBtnJugarPressed"]
 [connection signal="pressed" from="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/BtnAjustes" to="CanvasLayer" method="_OnBtnAjustesPressed"]
 [connection signal="button_down" from="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/BtnSalir" to="CanvasLayer" method="_OnBtnSalirPressed"]
+[connection signal="pressed" from="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/ScrollContainer/VBoxContainer/ModoVentana/Fullscreen" to="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/ScrollContainer/VBoxContainer/ModoVentana" method="_OnFullScreenPressed"]
+[connection signal="pressed" from="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/ScrollContainer/VBoxContainer/ModoVentana/Maximizado" to="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/ScrollContainer/VBoxContainer/ModoVentana" method="_OnMaximizadoPressed"]
+[connection signal="pressed" from="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/ScrollContainer/VBoxContainer/ModoVentana/Ventana" to="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/ScrollContainer/VBoxContainer/ModoVentana" method="_OnVentanaPressed"]
 [connection signal="pressed" from="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/Salir" to="CanvasLayer" method="_OnBtnAtrasPressed"]
