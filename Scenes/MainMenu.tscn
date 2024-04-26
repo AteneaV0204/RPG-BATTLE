@@ -24,7 +24,6 @@ texture = ExtResource("1_3x5wy")
 script = ExtResource("2_yyarh")
 
 [node name="Main" type="Control" parent="CanvasLayer"]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -83,6 +82,7 @@ size_flags_vertical = 3
 text = "Salir"
 
 [node name="Ajustes" type="Control" parent="CanvasLayer"]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
