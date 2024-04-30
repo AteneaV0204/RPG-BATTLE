@@ -16,14 +16,7 @@ public partial class Mapa1 : Node2D
 	{
 		mapa = GetNode<TileMap>("TileMap");
 		jugador = (Jugador)GetNode<CharacterBody2D>("Jugador");
-
-        //Crear timer para el crecimiento de las plantas
-        timer = new()
-        {
-            WaitTime = 0.1
-        };
-		timer.Timeout += TimerTimeout;
-		AddChild(timer);
+		timer = GetNode<Timer>("Timer");
     }
 
 	public override void _Process(double delta)
@@ -57,9 +50,8 @@ public partial class Mapa1 : Node2D
 			
             if (((bool)semillas) == true)
             {
-				GD.Print("semillas");
 				CicloPlantas(local, 0, cordSemilla, 3);
-                GD.Print("CicloPlantas");
+                GD.Print("Planta");
             }
 		}
 	}
@@ -71,21 +63,33 @@ public partial class Mapa1 : Node2D
 	/// <param name="fasePlanta">Fase actual de la planta en el tileset</param>
 	/// <param name="cordSemilla">Coordenada de la primera fase de la planta</param>
 	/// <param name="finalPlanta">Los tilesets que hay hasta la ultima fase de la planta</param>
-	private async void CicloPlantas(Vector2I posPlanta, int fasePlanta, Vector2I cordSemilla, int finalPlanta)
+	private void CicloPlantas(Vector2I posPlanta, int fasePlanta, Vector2I cordSemilla, int finalPlanta)
 	{
         mapa.SetCell(capaSemillas, posPlanta, plantasID, cordSemilla);
-		GD.Print("Setcell");
-		await ToSignal(timer, "timeout");
-		GD.Print("await");
+		timer.Start();
+
+		if(fasePlanta == finalPlanta) //Si la planta ya ha terminado de crecer, para el temportizador y sale del metodo
+		{
+			timer.Stop();
+			return;
+		}
+		else
+		{
+			Vector2I nuevaFase = new((cordSemilla.X + 1), cordSemilla.Y); //Cambia el aspecto de la planta para que crezca
+            mapa.SetCell(capaSemillas, posPlanta, plantasID, nuevaFase);
+			CicloPlantas(posPlanta, fasePlanta + 1, nuevaFase, finalPlanta);
+        }
     }
 
     private void TimerTimeout()
     {
-		GD.Print("timer");
         characterPosition = (Vector2I)jugador.GetCharacterPosition();
+        Vector2I plantaLocal = (Vector2I)mapa.MapToLocal(characterPosition);
 
         Vector2I cordSemilla = new(1, 0);
-        CicloPlantas(characterPosition, 0, cordSemilla, 3);
+        CicloPlantas(plantaLocal, 0, cordSemilla, 3);
+
+        GD.Print("fin");
     }
 
 
