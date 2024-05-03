@@ -1,7 +1,8 @@
-[gd_scene load_steps=45 format=3 uid="uid://cch548rclwodb"]
+[gd_scene load_steps=46 format=3 uid="uid://cch548rclwodb"]
 
 [ext_resource type="Script" path="res://Scripts/Jugador.cs" id="1_vilhd"]
 [ext_resource type="Texture2D" uid="uid://d7ysnhtcoljx" path="res://Assets/Characters/sprites.png" id="2_ns5nc"]
+[ext_resource type="AudioStream" uid="uid://dplphew3x51ug" path="res://Assets/Music/depositphotos_521109604-track-farm-game-sounds-farming-dig.mp3" id="3_skba4"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_e1ghc"]
 animation = &"ararIzq"
@@ -120,7 +121,7 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 graph_offset = Vector2(0, -94.6529)
 
 [sub_resource type="RectangleShape2D" id="1"]
-size = Vector2(12, 14)
+size = Vector2(8, 13)
 
 [sub_resource type="Animation" id="2"]
 resource_name = "Abajo"
@@ -441,6 +442,7 @@ hframes = 4
 vframes = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
 shape = SubResource("1")
 
 [node name="Animacion" type="AnimationPlayer" parent="."]
@@ -448,3 +450,9 @@ libraries = {
 "": SubResource("AnimationLibrary_nlhfe")
 }
 speed_scale = 3.0
+
+[node name="Arar" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_skba4")
+max_distance = 100.0
+attenuation = 1.1487
+bus = &"Sfx"

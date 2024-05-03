@@ -10,13 +10,15 @@ public partial class Jugador : CharacterBody2D
 	private Sprite2D jugador;
 	private AnimationTree tree;
 	private CharacterBody2D characterBody;
-
+	private AudioStreamPlayer2D arar;
+	
 	public override void _Ready()
 	{
 		// Obtener referencias a los nodos
 		animacion = GetNode<AnimationPlayer>("Animacion");
 		jugador = GetNode<Sprite2D>("SpriteJugador");
 		tree = GetNode<AnimationTree>("AnimationTree");
+		arar = GetNode<AudioStreamPlayer2D>("Arar");
 
 		direction = Vector2.Zero;
 
@@ -67,6 +69,7 @@ public partial class Jugador : CharacterBody2D
 		if (Input.IsActionJustPressed("plow"))
 		{
 			tree.Set("parameters/conditions/arar", true);
+			arar.Play();
 		}
 		else
 		{

@@ -1,12 +1,11 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1714504889
-default_env.tres::Environment::7784281804771679778::1714341126::0::1::::<><>::
+::res://::1714760190
+default_bus_layout.tres::AudioBusLayout::195694335820558847::1714679133::0::1::::<><>::
+default_env.tres::Environment::7784281804771679778::1714737804::0::1::::<><>::
 icon.png::CompressedTexture2D::7539191531000338168::1709637054::1709845753::1::::<><>::
 README.md::TextFile::-1::1714432645::0::1::::<><>::
-::res://Assets/::1714136856
-Fondo.png::CompressedTexture2D::5863295513404031506::1713781297::1713781300::1::::<><>::
-musica-jazz-samba-tranquila-guifrog.mp3::AudioStreamMP3::4397967477148657514::1710240299::1714136856::1::::<><>::
-::res://Assets/Characters/::1711556154
+::res://Assets/::1714760136
+::res://Assets/Characters/::1714760136
 Basic Charakter Actions.png::CompressedTexture2D::4829049803491437419::1709756001::1709846519::1::::<><>::
 Basic Charakter Spritesheet.png::CompressedTexture2D::5982058185310509398::1709756001::1709846519::1::::<><>::
 Egg_And_Nest.png::CompressedTexture2D::6503651958835543361::1709756001::1709846519::1::::<><>::
@@ -14,21 +13,25 @@ Free Chicken Sprites.png::CompressedTexture2D::1847530302897232052::1709756001::
 Free Cow Sprites.png::CompressedTexture2D::5447636683059487424::1709756001::1709846519::1::::<><>::
 sprites.png::CompressedTexture2D::278116665644385061::1711284582::1711380950::1::::<><>::
 Tools.png::CompressedTexture2D::3870554740688539795::1709756001::1709846519::1::::<><>::
-::res://Assets/Objects/::1709845754
+::res://Assets/Music/::1714760136
+depositphotos_521109604-track-farm-game-sounds-farming-dig.mp3::AudioStreamMP3::8235726361776512886::1714728637::1714728739::1::::<><>::
+musica-jazz-samba-tranquila-guifrog.mp3::AudioStreamMP3::4397967477148657514::1710240299::1714728674::1::::<><>::
+::res://Assets/Objects/::1714760136
 Basic_Furniture.png::CompressedTexture2D::3051227330939955471::1709756001::1709845754::1::::<><>::
 Basic_Grass_Biom_things.png::CompressedTexture2D::6495948235099380574::1709756001::1709845754::1::::<><>::
 Basic_Plants.png::CompressedTexture2D::5652292370103839431::1709756001::1709845754::1::::<><>::
 Basic_tools_and_meterials.png::CompressedTexture2D::8638094488726631758::1709756001::1709845754::1::::<><>::
 Chest.png::CompressedTexture2D::3389535394869891123::1709756001::1709845754::1::::<><>::
 Egg_item.png::CompressedTexture2D::9051171020821458234::1709756001::1709845754::1::::<><>::
+Fondo.png::CompressedTexture2D::5863295513404031506::1713781297::1714728674::1::::<><>::
 Free_Chicken_House.png::CompressedTexture2D::1874432311471576962::1709756001::1709845754::1::::<><>::
 Paths.png::CompressedTexture2D::4334409156562341666::1709756001::1709845754::1::::<><>::
 Simple_Milk_and_grass_item.png::CompressedTexture2D::4775941565618532470::1709756001::1709845754::1::::<><>::
 Wood_Bridge.png::CompressedTexture2D::8512416725952874514::1709756001::1709845754::1::::<><>::
-::res://Assets/Sprout Lands color pallet/::1709845754
+::res://Assets/Sprout Lands color pallet/::1714760136
 Sprout Lands defautlt palette snip.PNG::CompressedTexture2D::5848639351425641118::1709756001::1709845754::1::::<><>::
 Sprout Lands defautlt palette.png::CompressedTexture2D::1279788478565918165::1709756001::1709845754::1::::<><>::
-::res://Assets/Tilesets/::1709845754
+::res://Assets/Tilesets/::1714760136
 Bitmask references 1.png::CompressedTexture2D::2042609346996588355::1709756001::1709845754::1::::<><>::
 Bitmask references 2.png::CompressedTexture2D::3814352228740467480::1709756001::1709845753::1::::<><>::
 Fences.png::CompressedTexture2D::1317780207493841790::1709756001::1709845753::1::::<><>::
@@ -37,14 +40,14 @@ Hills.png::CompressedTexture2D::5199302144936600454::1709756001::1709845753::1::
 Tilled_Dirt.png::CompressedTexture2D::2168805750194342684::1709756001::1709845753::1::::<><>::
 Water.png::CompressedTexture2D::2440991754056668134::1709756001::1709845753::1::::<><>::
 Wooden House.png::CompressedTexture2D::1188363799261916075::1709756001::1709845753::1::::<><>::
-::res://Scenes/::1714341126
-Jugador.tscn::PackedScene::4929544756385602559::1714341126::0::1::::<><>::res://Scripts/Jugador.cs<>uid://d7ysnhtcoljx::::res://Assets/Characters/sprites.png
-MainMenu.tscn::PackedScene::6957687376662864948::1714341126::0::1::::<><>::uid://cpshvdi4fcwyk::::res://Assets/Fondo.png<>res://Scripts/Menu.cs<>uid://bpbe18lbgtft::::res://Scenes/menu.tres<>res://Scripts/ModoVentana.cs<>res://Scripts/Resolucion.cs
-Mapa1.tscn::PackedScene::3020804654794773934::1714341126::0::1::::<><>::uid://cch548rclwodb::::res://Scenes/Jugador.tscn<>uid://55t6cnsihb4g::::res://Assets/Tilesets/Tilled_Dirt.png<>res://Scripts/Mapa1.cs<>uid://blimg78706y5w::::res://Assets/Tilesets/Grass.png<>uid://s1lwaq3vgd4y::::res://Assets/Tilesets/Fences.png<>uid://cmsaouscg33ct::::res://Assets/Objects/Basic_Plants.png
+::res://Scenes/::1714760136
+Jugador.tscn::PackedScene::4929544756385602559::1714737804::0::1::::<><>::res://Scripts/Jugador.cs<>uid://d7ysnhtcoljx::::res://Assets/Characters/sprites.png<>uid://dplphew3x51ug::::res://Assets/Music/depositphotos_521109604-track-farm-game-sounds-farming-dig.mp3
+MainMenu.tscn::PackedScene::6957687376662864948::1714737804::0::1::::<><>::uid://cpshvdi4fcwyk::::res://Assets/Objects/Fondo.png<>res://Scripts/Menu.cs<>uid://bpbe18lbgtft::::res://Scenes/menu.tres<>res://Scripts/ModoVentana.cs<>res://Scripts/Resolucion.cs<>uid://b3wn48mf2q4iw::::res://Assets/Music/musica-jazz-samba-tranquila-guifrog.mp3
+Mapa1.tscn::PackedScene::3020804654794773934::1714737804::0::1::::<><>::uid://cch548rclwodb::::res://Scenes/Jugador.tscn<>uid://55t6cnsihb4g::::res://Assets/Tilesets/Tilled_Dirt.png<>res://Scripts/Mapa1.cs<>uid://blimg78706y5w::::res://Assets/Tilesets/Grass.png<>uid://s1lwaq3vgd4y::::res://Assets/Tilesets/Fences.png<>uid://cmsaouscg33ct::::res://Assets/Objects/Basic_Plants.png
 menu.tres::Theme::101223787204348521::1713785276::0::1::::<><>::
-::res://Scripts/::1714341122
-Jugador.cs::CSharpScript::-1::1714340323::0::1::::<>CharacterBody2D<>::
-Mapa1.cs::CSharpScript::-1::1714341122::0::1::::<>Node2D<>::
-Menu.cs::CSharpScript::-1::1714340323::0::1::::<>CanvasLayer<>::
+::res://Scripts/::1714760136
+Jugador.cs::CSharpScript::-1::1714732308::0::1::::<>CharacterBody2D<>::
+Mapa1.cs::CSharpScript::-1::1714737104::0::1::::<>Node2D<>::
+Menu.cs::CSharpScript::-1::1714733752::0::1::::<>CanvasLayer<>::
 ModoVentana.cs::CSharpScript::-1::1714217097::0::1::::<>Control<>::
 Resolucion.cs::CSharpScript::-1::1714217147::0::1::::<>HBoxContainer<>::

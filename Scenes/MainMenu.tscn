@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://c6emdhkxwphr5"]
+[gd_scene load_steps=9 format=3 uid="uid://c6emdhkxwphr5"]
 
-[ext_resource type="Texture2D" uid="uid://cpshvdi4fcwyk" path="res://Assets/Fondo.png" id="1_3x5wy"]
+[ext_resource type="Texture2D" uid="uid://cpshvdi4fcwyk" path="res://Assets/Objects/Fondo.png" id="1_blyhb"]
 [ext_resource type="Script" path="res://Scripts/Menu.cs" id="2_yyarh"]
 [ext_resource type="Theme" uid="uid://bpbe18lbgtft" path="res://Scenes/menu.tres" id="3_3admr"]
 [ext_resource type="Script" path="res://Scripts/ModoVentana.cs" id="4_8ljvy"]
 [ext_resource type="Script" path="res://Scripts/Resolucion.cs" id="5_e43uq"]
+[ext_resource type="AudioStream" uid="uid://b3wn48mf2q4iw" path="res://Assets/Music/musica-jazz-samba-tranquila-guifrog.mp3" id="6_x1s6x"]
 
 [sub_resource type="SystemFont" id="SystemFont_bb4lj"]
 
@@ -20,12 +21,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_3x5wy")
+texture = ExtResource("1_blyhb")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("2_yyarh")
 
 [node name="Main" type="Control" parent="CanvasLayer"]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -84,7 +86,6 @@ size_flags_vertical = 3
 text = "Salir"
 
 [node name="Ajustes" type="Control" parent="CanvasLayer"]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -130,8 +131,10 @@ offset_bottom = -50.0
 grow_horizontal = 2
 grow_vertical = 2
 tab_alignment = 1
+current_tab = 1
 
 [node name="Graficos" type="TabBar" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer"]
+visible = false
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos"]
@@ -206,7 +209,6 @@ theme_override_font_sizes/font_size = 32
 text = "(solo en modo ventana)"
 
 [node name="Sonido" type="TabBar" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer"]
-visible = false
 layout_mode = 2
 
 [node name="Accesibilidad" type="TabBar" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer"]
@@ -217,6 +219,12 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 8
 text = "Atras"
+
+[node name="Musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_x1s6x")
+volume_db = -5.986
+autoplay = true
+bus = &"Musica"
 
 [connection signal="pressed" from="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/BtnJugar" to="CanvasLayer" method="_OnBtnJugarPressed"]
 [connection signal="pressed" from="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/BtnAjustes" to="CanvasLayer" method="_OnBtnAjustesPressed"]
