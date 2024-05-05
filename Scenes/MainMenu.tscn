@@ -1,12 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://c6emdhkxwphr5"]
+[gd_scene load_steps=12 format=3 uid="uid://c6emdhkxwphr5"]
 
 [ext_resource type="Texture2D" uid="uid://cpshvdi4fcwyk" path="res://Assets/Objects/Fondo.png" id="1_blyhb"]
 [ext_resource type="Script" path="res://Scripts/Menu.cs" id="2_yyarh"]
 [ext_resource type="Theme" uid="uid://bpbe18lbgtft" path="res://Scenes/menu.tres" id="3_3admr"]
 [ext_resource type="Script" path="res://Scripts/ModoVentana.cs" id="4_8ljvy"]
 [ext_resource type="Script" path="res://Scripts/Resolucion.cs" id="5_e43uq"]
-[ext_resource type="Script" path="res://Scripts/Sonido.cs" id="6_fanc0"]
+[ext_resource type="Script" path="res://Scripts/Maestros.cs" id="6_fanc0"]
 [ext_resource type="AudioStream" uid="uid://b3wn48mf2q4iw" path="res://Assets/Music/musica-jazz-samba-tranquila-guifrog.mp3" id="6_x1s6x"]
+[ext_resource type="Script" path="res://Scripts/Musica.cs" id="7_v0inr"]
+[ext_resource type="Script" path="res://Scripts/Sfx.cs" id="8_phfg0"]
 
 [sub_resource type="SystemFont" id="SystemFont_bb4lj"]
 
@@ -132,10 +134,8 @@ offset_bottom = -50.0
 grow_horizontal = 2
 grow_vertical = 2
 tab_alignment = 1
-current_tab = 1
 
 [node name="Graficos" type="TabBar" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer"]
-visible = false
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos"]
@@ -199,6 +199,7 @@ theme_override_constants/separation = 27
 custom_minimum_size = Vector2(240, 0)
 layout_mode = 2
 tooltip_text = "Cambiar la resolucion de la pantalla"
+language = "es_ES"
 
 [node name="Aclaración" type="Label" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/VBoxContainer/Resolucion"]
 custom_minimum_size = Vector2(20, 0)
@@ -207,47 +208,97 @@ theme_override_font_sizes/font_size = 32
 text = "(solo en modo ventana)"
 
 [node name="Sonido" type="TabBar" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer"]
+visible = false
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/MarginContainer"]
+layout_mode = 2
 alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/VBoxContainer"]
+[node name="Maestros" type="HBoxContainer" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 64
 script = ExtResource("6_fanc0")
 
-[node name="LbMaestro" type="Label" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/VBoxContainer/HBoxContainer"]
+[node name="LbMaestro" type="Label" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/MarginContainer/VBoxContainer/Maestros"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Volumen Maestro"
 
-[node name="VSeparator" type="VSeparator" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/VBoxContainer/HBoxContainer"]
+[node name="VSeparator" type="VSeparator" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/MarginContainer/VBoxContainer/Maestros"]
 layout_mode = 2
 
-[node name="VolMaestro" type="HSlider" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/VBoxContainer/HBoxContainer"]
+[node name="VolMaestro" type="HSlider" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/MarginContainer/VBoxContainer/Maestros"]
 custom_minimum_size = Vector2(200, 30)
 layout_mode = 2
 size_flags_vertical = 4
-value = 100.0
+max_value = 1.0
+step = 0.001
+value = 1.0
 
-[node name="VSeparator2" type="VSeparator" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-
-[node name="VolNum" type="Label" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/VBoxContainer/HBoxContainer"]
+[node name="VolNum" type="Label" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/MarginContainer/VBoxContainer/Maestros"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "100"
 
-[node name="Accesibilidad" type="TabBar" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer"]
-visible = false
+[node name="Musica" type="HBoxContainer" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_constants/separation = 64
+script = ExtResource("7_v0inr")
+
+[node name="LbMusica" type="Label" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/MarginContainer/VBoxContainer/Musica"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Volumen Musica"
+
+[node name="VSeparator" type="VSeparator" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/MarginContainer/VBoxContainer/Musica"]
+layout_mode = 2
+
+[node name="VolMusica" type="HSlider" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/MarginContainer/VBoxContainer/Musica"]
+custom_minimum_size = Vector2(200, 30)
+layout_mode = 2
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="VolNum" type="Label" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/MarginContainer/VBoxContainer/Musica"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "100"
+
+[node name="Sfx" type="HBoxContainer" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 64
+script = ExtResource("8_phfg0")
+
+[node name="LbSfx" type="Label" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/MarginContainer/VBoxContainer/Sfx"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Volumen Efectos"
+
+[node name="VSeparator" type="VSeparator" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/MarginContainer/VBoxContainer/Sfx"]
+layout_mode = 2
+
+[node name="VolSfx" type="HSlider" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/MarginContainer/VBoxContainer/Sfx"]
+custom_minimum_size = Vector2(200, 30)
+layout_mode = 2
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="VolNum" type="Label" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/MarginContainer/VBoxContainer/Sfx"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "100"
 
 [node name="Salir" type="Button" parent="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer"]
 layout_mode = 2
@@ -261,10 +312,15 @@ autoplay = true
 bus = &"Musica"
 
 [connection signal="pressed" from="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/BtnJugar" to="CanvasLayer" method="_OnBtnJugarPressed"]
+[connection signal="pressed" from="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/BtnJugar" to="CanvasLayer" method="_OnClickSound"]
 [connection signal="pressed" from="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/BtnAjustes" to="CanvasLayer" method="_OnBtnAjustesPressed"]
+[connection signal="pressed" from="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/BtnAjustes" to="CanvasLayer" method="_OnClickSound"]
 [connection signal="button_down" from="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/BtnSalir" to="CanvasLayer" method="_OnBtnSalirPressed"]
+[connection signal="button_down" from="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/BtnSalir" to="CanvasLayer" method="_OnClickSound"]
 [connection signal="pressed" from="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/VBoxContainer/ModoVentana/Fullscreen" to="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/VBoxContainer/ModoVentana" method="_OnFullScreenPressed"]
 [connection signal="pressed" from="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/VBoxContainer/ModoVentana/Maximizado" to="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/VBoxContainer/ModoVentana" method="_OnMaximizadoPressed"]
 [connection signal="pressed" from="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/VBoxContainer/ModoVentana/Ventana" to="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Graficos/MarginContainer/VBoxContainer/ModoVentana" method="_OnVentanaPressed"]
-[connection signal="value_changed" from="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/VBoxContainer/HBoxContainer/VolMaestro" to="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/VBoxContainer/HBoxContainer" method="_OnVolMaestroValueChanged"]
+[connection signal="value_changed" from="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/MarginContainer/VBoxContainer/Maestros/VolMaestro" to="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/MarginContainer/VBoxContainer/Maestros" method="_OnVolMaestroValueChanged"]
+[connection signal="value_changed" from="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/MarginContainer/VBoxContainer/Musica/VolMusica" to="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/MarginContainer/VBoxContainer/Musica" method="_OnVolMaestroValueChanged"]
+[connection signal="value_changed" from="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/MarginContainer/VBoxContainer/Sfx/VolSfx" to="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/MarginContainer/VBoxContainer/Sfx" method="_OnVolMaestroValueChanged"]
 [connection signal="pressed" from="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/Salir" to="CanvasLayer" method="_OnBtnAtrasPressed"]

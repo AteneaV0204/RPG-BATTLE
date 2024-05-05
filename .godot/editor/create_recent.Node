@@ -1,9 +1,10 @@
+AudioStreamPlayer2D
+MarginContainer
 HSlider
 VSeparator
 Label
 HBoxContainer
 VBoxContainer
-AudioStreamPlayer2D
 AudioStreamPlayer
 CollisionShape2D
 StaticBody2D
@@ -11,5 +12,3 @@ AnimatedSprite2D
 Timer
 OptionButton
 Button
-CheckButton
-MenuButton
