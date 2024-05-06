@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bjbkhgjxx6lo5"]
+[gd_scene load_steps=13 format=3 uid="uid://bjbkhgjxx6lo5"]
 
 [ext_resource type="PackedScene" uid="uid://cch548rclwodb" path="res://Scenes/Jugador.tscn" id="1"]
 [ext_resource type="Texture2D" uid="uid://55t6cnsihb4g" path="res://Assets/Tilesets/Tilled_Dirt.png" id="1_1witk"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://blimg78706y5w" path="res://Assets/Tilesets/Grass.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://s1lwaq3vgd4y" path="res://Assets/Tilesets/Fences.png" id="2_ntgk6"]
 [ext_resource type="Texture2D" uid="uid://cmsaouscg33ct" path="res://Assets/Objects/Basic_Plants.png" id="3_v7erx"]
+[ext_resource type="AudioStream" uid="uid://6gdh0r3cfh7d" path="res://Assets/Music/gentle-fields-194622.mp3" id="7_froyw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vbocw"]
 texture = ExtResource("2_ntgk6")
@@ -656,5 +657,10 @@ position = Vector2(-48, -16)
 
 [node name="Camera2D" type="Camera2D" parent="Jugador"]
 zoom = Vector2(3, 3)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_froyw")
+autoplay = true
+bus = &"Musica"
 
 [connection signal="timeout" from="Timer" to="." method="_OnTimerTimeout"]
