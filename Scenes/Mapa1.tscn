@@ -650,7 +650,6 @@ layer_3/tile_data = PackedInt32Array()
 metadata/_edit_group_ = true
 
 [node name="Timer" type="Timer" parent="."]
-one_shot = true
 
 [node name="Jugador" parent="." instance=ExtResource("1")]
 position = Vector2(-48, -16)
@@ -660,7 +659,6 @@ zoom = Vector2(3, 3)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_froyw")
-autoplay = true
 bus = &"Musica"
 
 [connection signal="timeout" from="Timer" to="." method="_OnTimerTimeout"]
