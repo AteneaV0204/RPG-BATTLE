@@ -1,22 +1,19 @@
 using Godot;
+using System.Threading.Tasks;
 
 public partial class Mapa1 : Node2D
 {
-
 	private TileMap mapa;
 	private int capaTierra = 1;
 	private int capaSemillas = 3;
 	private int plantasID = 1;
 	private Jugador jugador;
-	private Timer timer;
 	private Vector2I characterPosition;
-	private bool crecimiento = false;
 
 	public override void _Ready()
 	{
 		mapa = GetNode<TileMap>("TileMap");
 		jugador = (Jugador)GetNode<CharacterBody2D>("Jugador");
-		timer = GetNode<Timer>("Timer");
 	}
 
 	public override void _Process(double delta)
@@ -34,7 +31,6 @@ public partial class Mapa1 : Node2D
 
 		if (Input.IsActionJustPressed("seeds")) 
 		{
-            timer.Start();
             local = mapa.LocalToMap(characterPosition);
 			TileData tileData = mapa.GetCellTileData(capaTierra, local);
 			Variant semillas = false;
@@ -49,13 +45,9 @@ public partial class Mapa1 : Node2D
 			}
 			Vector2I cordSemilla = new(1, 0);
 			
-			if (((bool)semillas) == true && crecimiento)
+			if (((bool)semillas) == true)
 			{
-                //mapa.SetCell(capaSemillas, local, plantasID, cordSemilla);
-				crecimiento = false;
-                CicloPlantas(local, 0, cordSemilla, 4);
-				timer.Stop();
-                timer.Start();
+                CicloPlantas(local, cordSemilla, 3);
                 GD.Print("Planta");
             }
 		}
@@ -68,29 +60,17 @@ public partial class Mapa1 : Node2D
 	/// <param name="fasePlanta">Fase actual de la planta en el tileset</param>
 	/// <param name="cordSemilla">Coordenada de la primera fase de la planta en el atlas</param>
 	/// <param name="finalPlanta">Los tilesets que hay hasta la ultima fase de la planta</param>
-	private void CicloPlantas(Vector2I posPlanta, int fasePlanta, Vector2I cordSemilla, int finalPlanta)
+	private async void CicloPlantas(Vector2I posPlanta, Vector2I cordSemilla, int finalPlanta)
 	{
-        //mapa.SetCell(capaSemillas, posPlanta, plantasID, cordSemilla);
+        mapa.SetCell(capaSemillas, posPlanta, plantasID, cordSemilla);
 
-        for (int i = fasePlanta; i <= finalPlanta; i++)
-        {
-            mapa.SetCell(capaSemillas, posPlanta, plantasID, cordSemilla);
-            Vector2I nuevaFase = new((cordSemilla.X + 1), cordSemilla.Y); //Cambia el aspecto de la planta para que crezca
-            mapa.SetCell(capaSemillas, posPlanta, plantasID, nuevaFase);
+		for (int i = 0; i <= finalPlanta; i++)
+		{
+			await Task.Delay(1000);
+			Vector2I nuevaFase = new((cordSemilla.X + i), cordSemilla.Y); //Cambia el aspecto de la planta para que crezca
+			mapa.SetCell(capaSemillas, posPlanta, plantasID, nuevaFase);
+		}
 
-            if (fasePlanta == finalPlanta) //Si la planta ya ha terminado de crecer, para el temportizador y sale del metodo
-            {
-                timer.Stop();
-                return;
-            }
-        }
-        //CicloPlantas(posPlanta, fasePlanta + 1, nuevaFase, finalPlanta);
-    }
-
-    private void _OnTimerTimeout()
-	{
-		crecimiento = true;
-		GD.Print("fin");
 	}
 
 }
