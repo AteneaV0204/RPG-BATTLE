@@ -1,4 +1,5 @@
 using Godot;
+using System.Threading.Tasks;
 
 public partial class Mapa1 : Node2D
 {
@@ -8,7 +9,6 @@ public partial class Mapa1 : Node2D
 	private int capaSemillas = 3;
 	private int plantasID = 1;
 	private Jugador jugador;
-	private Timer timer;
 	private Vector2I characterPosition;
 
 
@@ -16,7 +16,6 @@ public partial class Mapa1 : Node2D
 	{
 		mapa = GetNode<TileMap>("TileMap");
 		jugador = (Jugador)GetNode<CharacterBody2D>("Jugador");
-		timer = GetNode<Timer>("Timer");
 	}
 
 	public override void _Process(double delta)
@@ -46,13 +45,12 @@ public partial class Mapa1 : Node2D
 			{
 				GD.Print("No se puede plantar ahi"); //Convertir a popup
 			}
-			Vector2I cordSemilla = new(4, 0);
+			Vector2I cordSemilla = new(1, 0);
 			
 			if (((bool)semillas) == true)
 			{
                 mapa.SetCell(capaSemillas, local, plantasID, cordSemilla);
-                //CicloPlantas(local, 0, cordSemilla, 3);
-                GD.Print("Planta");
+                CicloPlantas(local, cordSemilla, 3);
 			}
 		}
 	}
@@ -61,36 +59,18 @@ public partial class Mapa1 : Node2D
 	/// Funcion para manejar el ciclo de crecimiento de las plantas
 	/// </summary>
 	/// <param name="posPlanta">Posicion de la planta en el tilemap</param>
-	/// <param name="fasePlanta">Fase actual de la planta en el tileset</param>
 	/// <param name="cordSemilla">Coordenada de la primera fase de la planta</param>
 	/// <param name="finalPlanta">Los tilesets que hay hasta la ultima fase de la planta</param>
-	//private void CicloPlantas(Vector2I posPlanta, int fasePlanta, Vector2I cordSemilla, int finalPlanta)
-	//{
-	//	mapa.SetCell(capaSemillas, posPlanta, plantasID, cordSemilla);
-	//	timer.Start();
+	private async void CicloPlantas(Vector2I posPlanta, Vector2I cordSemilla, int finalPlanta)
+	{
+		mapa.SetCell(capaSemillas, posPlanta, plantasID, cordSemilla);
 
-	//	if(fasePlanta == finalPlanta) //Si la planta ya ha terminado de crecer, para el temportizador y sale del metodo
-	//	{
-	//		timer.Stop();
-	//		return;
-	//	}
-	//	else
-	//	{
-	//		Vector2I nuevaFase = new((cordSemilla.X + 1), cordSemilla.Y); //Cambia el aspecto de la planta para que crezca
-	//		//mapa.SetCell(capaSemillas, posPlanta, plantasID, nuevaFase);
-	//		CicloPlantas(posPlanta, fasePlanta + 1, nuevaFase, finalPlanta);
-	//	}
-	//}
-	
-	//private void _OnTimerTimeout()
-	//{
-	//	characterPosition = (Vector2I)jugador.GetCharacterPosition();
-	//	Vector2I plantaLocal = (Vector2I)mapa.MapToLocal(characterPosition);
+        for (int i = 0; i <= finalPlanta; i++)
+        {
+            await Task.Delay(1000);
+            Vector2I nuevaFase = new((cordSemilla.X + i), cordSemilla.Y); //Cambia el aspecto de la planta para que crezca
+            mapa.SetCell(capaSemillas, posPlanta, plantasID, nuevaFase);
+        }
+    }
 
-	//	Vector2I cordSemilla = new(1, 0);
-	//	CicloPlantas(plantaLocal, 0, cordSemilla, 3);
-
-	//	GD.Print("fin");
-	//}
-	
 }
