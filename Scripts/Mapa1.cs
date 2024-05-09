@@ -49,6 +49,7 @@ public partial class Mapa1 : Node2D
 			
 			if (((bool)semillas) == true)
 			{
+<<<<<<< HEAD
                 CicloPlantas(local, cordSemilla, 3);
             }
 		}
@@ -66,6 +67,10 @@ public partial class Mapa1 : Node2D
 			else
 			{
 				GD.Print("No hay plantas que cosechar aqui"); //popup
+=======
+                mapa.SetCell(capaSemillas, local, plantasID, cordSemilla);
+                CicloPlantas(local, cordSemilla, 3);
+>>>>>>> nose
 			}
 		}
 	}
@@ -74,6 +79,7 @@ public partial class Mapa1 : Node2D
 	/// Funcion para manejar el ciclo de crecimiento de las plantas
 	/// </summary>
 	/// <param name="posPlanta">Posicion de la planta en el tilemap</param>
+<<<<<<< HEAD
 	/// <param name="fasePlanta">Fase actual de la planta en el tileset</param>
 	/// <param name="cordSemilla">Coordenada de la primera fase de la planta en el atlas</param>
 	/// <param name="finalPlanta">Los tilesets que hay hasta la ultima fase de la planta</param>
@@ -88,5 +94,20 @@ public partial class Mapa1 : Node2D
 			mapa.SetCell(capaSemillas, posPlanta, plantasID, nuevaFase);
 		}
 	}
+=======
+	/// <param name="cordSemilla">Coordenada de la primera fase de la planta</param>
+	/// <param name="finalPlanta">Los tilesets que hay hasta la ultima fase de la planta</param>
+	private async void CicloPlantas(Vector2I posPlanta, Vector2I cordSemilla, int finalPlanta)
+	{
+		mapa.SetCell(capaSemillas, posPlanta, plantasID, cordSemilla);
+
+        for (int i = 0; i <= finalPlanta; i++)
+        {
+            await Task.Delay(1000);
+            Vector2I nuevaFase = new((cordSemilla.X + i), cordSemilla.Y); //Cambia el aspecto de la planta para que crezca
+            mapa.SetCell(capaSemillas, posPlanta, plantasID, nuevaFase);
+        }
+    }
+>>>>>>> nose
 
 }

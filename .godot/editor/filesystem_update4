@@ -1,4 +1,5 @@
 res://default_env.tres
+<<<<<<< HEAD
 res://Scenes/Jugador.tscn
 res://Scripts/Mapa1.cs
 res://Scripts/Menu.cs
@@ -11,3 +12,17 @@ res://Scripts/Musica.cs
 res://Scripts/Maestros.cs
 res://Scripts/Resolucion.cs
 res://Scripts/Global.cs
+=======
+res://Scenes/Mapa1.tscn
+res://Scripts/Jugador.cs
+res://Scripts/Mapa1.cs
+res://Scripts/Menu.cs
+res://Scenes/Jugador.tscn
+res://Scenes/MainMenu.tscn
+res://Scripts/Maestros.cs
+res://Scripts/Sfx.cs
+res://Scripts/Musica.cs
+res://Scripts/OnClick.cs
+res://Scripts/Resolucion.cs
+res://Scripts/ModoVentana.cs
+>>>>>>> nose
