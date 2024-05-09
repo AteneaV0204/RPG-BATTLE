@@ -433,7 +433,11 @@ parameters/conditions/arar = false
 parameters/conditions/idle = false
 parameters/conditions/is_moving = false
 parameters/Arar/blend_position = Vector2(0, 0)
+<<<<<<< HEAD
 parameters/Idle/blend_position = Vector2(0.0018518, 0.611111)
+=======
+parameters/Idle/blend_position = Vector2(0.00370371, 0.727513)
+>>>>>>> parent of e3b325d (a)
 parameters/Walk/blend_position = Vector2(-1, 0.0174602)
 
 [node name="SpriteJugador" type="Sprite2D" parent="."]
