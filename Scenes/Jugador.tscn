@@ -1,6 +1,6 @@
 [gd_scene load_steps=46 format=3 uid="uid://cch548rclwodb"]
 
-[ext_resource type="Script" path="res://Scripts/Jugador.cs" id="1_vilhd"]
+[ext_resource type="Script" path="res://Scripts/Jugador.cs" id="1_51fx7"]
 [ext_resource type="Texture2D" uid="uid://d7ysnhtcoljx" path="res://Assets/Characters/sprites.png" id="2_ns5nc"]
 [ext_resource type="AudioStream" uid="uid://dplphew3x51ug" path="res://Assets/Music/depositphotos_521109604-track-farm-game-sounds-farming-dig.mp3" id="3_skba4"]
 
@@ -424,7 +424,7 @@ _data = {
 }
 
 [node name="Jugador" type="CharacterBody2D"]
-script = ExtResource("1_vilhd")
+script = ExtResource("1_51fx7")
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_x0h6j")
@@ -433,7 +433,7 @@ parameters/conditions/arar = false
 parameters/conditions/idle = false
 parameters/conditions/is_moving = false
 parameters/Arar/blend_position = Vector2(0, 0)
-parameters/Idle/blend_position = Vector2(0.374034, 0.168783)
+parameters/Idle/blend_position = Vector2(0.00370371, 0.727513)
 parameters/Walk/blend_position = Vector2(-1, 0.0174602)
 
 [node name="SpriteJugador" type="Sprite2D" parent="."]

@@ -9,6 +9,8 @@ public partial class Mapa1 : Node2D
 	private int plantasID = 1;
 	private Jugador jugador;
 	private Vector2I characterPosition;
+	private Global global;
+	private Vector2I plantaFinal = new(4, 0);
 
 	public override void _Ready()
 	{
@@ -48,8 +50,23 @@ public partial class Mapa1 : Node2D
 			if (((bool)semillas) == true)
 			{
                 CicloPlantas(local, cordSemilla, 3);
-                GD.Print("Planta");
             }
+		}
+
+		if (Input.IsActionJustPressed("crop"))
+		{
+			local = mapa.LocalToMap(characterPosition);
+
+			if (mapa.GetCellAtlasCoords(capaSemillas, local) == plantaFinal)
+			{
+				mapa.EraseCell(capaSemillas, local);
+                global.Trigo = +1;
+
+            }
+			else
+			{
+				GD.Print("No hay plantas que cosechar aqui"); //popup
+			}
 		}
 	}
 
@@ -70,7 +87,6 @@ public partial class Mapa1 : Node2D
 			Vector2I nuevaFase = new((cordSemilla.X + i), cordSemilla.Y); //Cambia el aspecto de la planta para que crezca
 			mapa.SetCell(capaSemillas, posPlanta, plantasID, nuevaFase);
 		}
-
 	}
 
 }

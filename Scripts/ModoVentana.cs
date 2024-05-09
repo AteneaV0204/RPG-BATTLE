@@ -13,6 +13,9 @@ public partial class ModoVentana : Control
         AgregarElementos();
     }
 
+    /// <summary>
+    /// Agrega los elementos del array al combobox (basebutton en godot)
+    /// </summary>
     private void AgregarElementos()
     {
         foreach (string modo in modos)
@@ -21,6 +24,11 @@ public partial class ModoVentana : Control
         }
     }
 
+    /// <summary>
+    /// Evento asociado al BaseButton del menu principal para cambiar
+    /// el modo de ventana
+    /// </summary>
+    /// <param name="index">Indice de la opcion seleccionada</param>
     private void _OnModoSelected(long index)
     {
         switch (index) {
