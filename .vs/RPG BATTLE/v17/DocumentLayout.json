@@ -9,7 +9,6 @@
       "RelativeMoniker": "D:0:0:{2C657BEA-919B-4C23-8F54-01D4C9BB9230}|RPG Battle.csproj|solutionrelative:scripts\\mapa1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
->>>>>>> nose
       "AbsoluteMoniker": "D:0:0:{2C657BEA-919B-4C23-8F54-01D4C9BB9230}|RPG Battle.csproj|c:\\users\\andy\\documents\\farming rpg\\scripts\\jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C657BEA-919B-4C23-8F54-01D4C9BB9230}|RPG Battle.csproj|solutionrelative:scripts\\jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -41,9 +40,6 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 0,
-=======
               "DocumentIndex": 2,
               "Title": "ModoVentana.cs",
               "DocumentMoniker": "C:\\Users\\Andy\\Documents\\Farming RPG\\Scripts\\ModoVentana.cs",
@@ -70,21 +66,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
->>>>>>> nose
               "Title": "Jugador.cs",
               "DocumentMoniker": "C:\\Users\\Andy\\Documents\\Farming RPG\\Scripts\\Jugador.cs",
               "RelativeDocumentMoniker": "Scripts\\Jugador.cs",
               "ToolTip": "C:\\Users\\Andy\\Documents\\Farming RPG\\Scripts\\Jugador.cs",
               "RelativeToolTip": "Scripts\\Jugador.cs",
-<<<<<<< HEAD
-              "ViewState": "AQIAAEEAAAAAAAAAAAAAAFkAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-09T17:39:00.498Z",
-=======
               "ViewState": "AQIAAEYAAAAAAAAAAAAkwF0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-07T22:08:03.676Z",
->>>>>>> nose
               "EditorCaption": ""
             }
           ]
