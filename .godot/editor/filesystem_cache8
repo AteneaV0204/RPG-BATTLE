@@ -1,7 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1715020131
+::res://::1715277362
 default_bus_layout.tres::AudioBusLayout::195694335820558847::1714679133::0::1::::<><>::
-default_env.tres::Environment::7784281804771679778::1714903767::0::1::::<><>::
+default_env.tres::Environment::7784281804771679778::1715276432::0::1::::<><>::
 icon.png::CompressedTexture2D::7539191531000338168::1709637054::1709845753::1::::<><>::
 README.md::TextFile::-1::1714432645::0::1::::<><>::
 ::res://Assets/::1714760136
@@ -13,10 +13,9 @@ Free Chicken Sprites.png::CompressedTexture2D::1847530302897232052::1709756001::
 Free Cow Sprites.png::CompressedTexture2D::5447636683059487424::1709756001::1709846519::1::::<><>::
 sprites.png::CompressedTexture2D::278116665644385061::1711284582::1711380950::1::::<><>::
 Tools.png::CompressedTexture2D::3870554740688539795::1709756001::1709846519::1::::<><>::
-::res://Assets/Music/::1714900965
+::res://Assets/Music/::1715024708
 depositphotos_521109604-track-farm-game-sounds-farming-dig.mp3::AudioStreamMP3::8235726361776512886::1714728637::1714728739::1::::<><>::
-gentle-fields-194622.mp3::AudioStreamMP3::2188436411459495143::1714900566::1714900965::1::::<><>::
-mixkit-clear-mouse-clicks-2997.wav::AudioStreamWAV::4255176040083518034::1714898727::1714898749::1::::<><>::
+gentle-fields-194622.mp3::AudioStreamMP3::2188436411459495143::1714900566::1715024589::1::::<><>::
 musica-jazz-samba-tranquila-guifrog.mp3::AudioStreamMP3::4397967477148657514::1710240299::1714728674::1::::<><>::
 ::res://Assets/Objects/::1714760136
 Basic_Furniture.png::CompressedTexture2D::3051227330939955471::1709756001::1709845754::1::::<><>::
@@ -42,18 +41,18 @@ Hills.png::CompressedTexture2D::5199302144936600454::1709756001::1709845753::1::
 Tilled_Dirt.png::CompressedTexture2D::2168805750194342684::1709756001::1709845753::1::::<><>::
 Water.png::CompressedTexture2D::2440991754056668134::1709756001::1709845753::1::::<><>::
 Wooden House.png::CompressedTexture2D::1188363799261916075::1709756001::1709845753::1::::<><>::
-::res://Scenes/::1714903767
-Jugador.tscn::PackedScene::4929544756385602559::1714900472::0::1::::<><>::res://Scripts/Jugador.cs<>uid://d7ysnhtcoljx::::res://Assets/Characters/sprites.png<>uid://dplphew3x51ug::::res://Assets/Music/depositphotos_521109604-track-farm-game-sounds-farming-dig.mp3
-MainMenu.tscn::PackedScene::6957687376662864948::1714903767::0::1::::<><>::uid://cpshvdi4fcwyk::::res://Assets/Objects/Fondo.png<>res://Scripts/Menu.cs<>uid://bpbe18lbgtft::::res://Scenes/menu.tres<>res://Scripts/ModoVentana.cs<>res://Scripts/Resolucion.cs<>res://Scripts/Maestros.cs<>uid://b3wn48mf2q4iw::::res://Assets/Music/musica-jazz-samba-tranquila-guifrog.mp3<>res://Scripts/Musica.cs<>res://Scripts/Sfx.cs
-Mapa1.tscn::PackedScene::3020804654794773934::1714900472::0::1::::<><>::uid://cch548rclwodb::::res://Scenes/Jugador.tscn<>uid://55t6cnsihb4g::::res://Assets/Tilesets/Tilled_Dirt.png<>res://Scripts/Mapa1.cs<>uid://blimg78706y5w::::res://Assets/Tilesets/Grass.png<>uid://s1lwaq3vgd4y::::res://Assets/Tilesets/Fences.png<>uid://cmsaouscg33ct::::res://Assets/Objects/Basic_Plants.png
+::res://Scenes/::1715277317
+Jugador.tscn::PackedScene::4929544756385602559::1715277317::0::1::::<><>::res://Scripts/Jugador.cs<>uid://d7ysnhtcoljx::::res://Assets/Characters/sprites.png<>uid://dplphew3x51ug::::res://Assets/Music/depositphotos_521109604-track-farm-game-sounds-farming-dig.mp3
+MainMenu.tscn::PackedScene::6957687376662864948::1715277317::0::1::::<><>::uid://cpshvdi4fcwyk::::res://Assets/Objects/Fondo.png<>res://Scripts/Menu.cs<>uid://bpbe18lbgtft::::res://Scenes/menu.tres<>res://Scripts/ModoVentana.cs<>res://Scripts/Resolucion.cs<>res://Scripts/Maestros.cs<>uid://b3wn48mf2q4iw::::res://Assets/Music/musica-jazz-samba-tranquila-guifrog.mp3<>res://Scripts/Musica.cs<>res://Scripts/Sfx.cs
+Mapa1.tscn::PackedScene::3020804654794773934::1715277317::0::1::::<><>::uid://cch548rclwodb::::res://Scenes/Jugador.tscn<>uid://55t6cnsihb4g::::res://Assets/Tilesets/Tilled_Dirt.png<>res://Scripts/Mapa1.cs<>uid://blimg78706y5w::::res://Assets/Tilesets/Grass.png<>uid://s1lwaq3vgd4y::::res://Assets/Tilesets/Fences.png<>uid://cmsaouscg33ct::::res://Assets/Objects/Basic_Plants.png<>uid://6gdh0r3cfh7d::::res://Assets/Music/gentle-fields-194622.mp3
 menu.tres::Theme::101223787204348521::1713785276::0::1::::<><>::
-::res://Scripts/::1714903686
-Jugador.cs::CSharpScript::-1::1714898679::0::1::::<>CharacterBody2D<>::
+::res://Scripts/::1715277317
+Jugador.cs::CSharpScript::-1::1715277317::0::1::::<>CharacterBody2D<>::
 Maestros.cs::CSharpScript::-1::1714899315::0::1::::<>HBoxContainer<>::
-Mapa1.cs::CSharpScript::-1::1714898679::0::1::::<>Node2D<>::
-Menu.cs::CSharpScript::-1::1714900511::0::1::::<>CanvasLayer<>::
-ModoVentana.cs::CSharpScript::-1::1714217097::0::1::::<>Control<>::
+Mapa1.cs::CSharpScript::-1::1715277317::0::1::::<>Node2D<>::
+Menu.cs::CSharpScript::-1::1715277317::0::1::::<>CanvasLayer<>::
+ModoVentana.cs::CSharpScript::-1::1715277317::0::1::::<>Control<>::
 Musica.cs::CSharpScript::-1::1714818758::0::1::::<>HBoxContainer<>::
-OnClick.cs::CSharpScript::-1::1714899005::0::1::::<>TabContainer<>::
+OnClick.cs::CSharpScript::-1::1715277317::0::1::::<><>::
 Resolucion.cs::CSharpScript::-1::1714903198::0::1::::<>HBoxContainer<>::
 Sfx.cs::CSharpScript::-1::1714818898::0::1::::<>HBoxContainer<>::

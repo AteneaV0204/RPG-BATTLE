@@ -433,7 +433,7 @@ parameters/conditions/arar = false
 parameters/conditions/idle = false
 parameters/conditions/is_moving = false
 parameters/Arar/blend_position = Vector2(0, 0)
-parameters/Idle/blend_position = Vector2(0.374034, 0.168783)
+parameters/Idle/blend_position = Vector2(0.0018518, 0.611111)
 parameters/Walk/blend_position = Vector2(-1, 0.0174602)
 
 [node name="SpriteJugador" type="Sprite2D" parent="."]
