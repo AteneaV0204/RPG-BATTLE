@@ -11,12 +11,16 @@ public partial class Mapa1 : Node2D
 	private Jugador jugador;
 	private Vector2I characterPosition;
 	private int trigo;
+    private AudioStreamPlayer2D cosechar;
+	private Label contador;
 
-	public override void _Ready()
+    public override void _Ready()
 	{
 		mapa = GetNode<TileMap>("TileMap");
 		jugador = (Jugador)GetNode<CharacterBody2D>("Jugador");
-	}
+        cosechar = GetNode<AudioStreamPlayer2D>("Cosechar");
+        contador = GetNode<Label>("Jugador/Camera2D/Contador");
+    }
 
 	public override void _Process(double delta)
 	{
@@ -49,7 +53,6 @@ public partial class Mapa1 : Node2D
 			{
                 mapa.SetCell(capaSemillas, local, plantasID, cordSemilla);
                 CicloPlantas(local, cordSemilla, 3);
-                GD.Print("Planta");
 			}
 		}
 
@@ -61,12 +64,13 @@ public partial class Mapa1 : Node2D
 			{
 				mapa.EraseCell(capaSemillas, local);
 				trigo++;
-				GD.Print("La cantidad actual de trigo es: " + trigo);
+				contador.Text = "= " + trigo;
+				cosechar.Play();
 
             }
             else
 			{
-				GD.Print("no trigo");
+				GD.Print("Debes plantar trigo para cosecharlo");
 			}
 		}
 	}

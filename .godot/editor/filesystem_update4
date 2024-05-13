@@ -5,3 +5,10 @@ res://Scripts/Mapa1.cs
 res://Scripts/Menu.cs
 res://Scenes/Mapa1.tscn
 res://Scenes/MainMenu.tscn
+res://Scripts/Maestros.cs
+res://Scripts/Sfx.cs
+res://Scripts/Musica.cs
+res://Scripts/OnClick.cs
+res://Scripts/Resolucion.cs
+res://Scripts/ModoVentana.cs
+res://Scenes/tienda.tscn
