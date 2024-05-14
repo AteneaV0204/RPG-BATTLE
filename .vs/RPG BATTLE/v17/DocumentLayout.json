@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{2C657BEA-919B-4C23-8F54-01D4C9BB9230}|RPG Battle.csproj|solutionrelative:scripts\\mapa1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{2C657BEA-919B-4C23-8F54-01D4C9BB9230}|RPG Battle.csproj|c:\\users\\andy\\documents\\farming rpg\\scenes\\tienda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C657BEA-919B-4C23-8F54-01D4C9BB9230}|RPG Battle.csproj|solutionrelative:scenes\\tienda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2C657BEA-919B-4C23-8F54-01D4C9BB9230}|RPG Battle.csproj|c:\\users\\andy\\documents\\farming rpg\\scripts\\jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C657BEA-919B-4C23-8F54-01D4C9BB9230}|RPG Battle.csproj|solutionrelative:scripts\\jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 250,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,26 +38,39 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Tienda.cs",
+              "DocumentMoniker": "C:\\Users\\Andy\\Documents\\Farming RPG\\Scenes\\Tienda.cs",
+              "RelativeDocumentMoniker": "Scenes\\Tienda.cs",
+              "ToolTip": "C:\\Users\\Andy\\Documents\\Farming RPG\\Scenes\\Tienda.cs",
+              "RelativeToolTip": "Scenes\\Tienda.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwB0AAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T16:45:43.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Mapa1.cs",
               "DocumentMoniker": "C:\\Users\\Andy\\Documents\\Farming RPG\\Scripts\\Mapa1.cs",
               "RelativeDocumentMoniker": "Scripts\\Mapa1.cs",
               "ToolTip": "C:\\Users\\Andy\\Documents\\Farming RPG\\Scripts\\Mapa1.cs",
               "RelativeToolTip": "Scripts\\Mapa1.cs",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAYwBUAAAA0AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-16T19:40:00.27Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Jugador.cs",
               "DocumentMoniker": "C:\\Users\\Andy\\Documents\\Farming RPG\\Scripts\\Jugador.cs",
               "RelativeDocumentMoniker": "Scripts\\Jugador.cs",
               "ToolTip": "C:\\Users\\Andy\\Documents\\Farming RPG\\Scripts\\Jugador.cs",
               "RelativeToolTip": "Scripts\\Jugador.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAACAAAA",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAkwGwAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-07T22:08:03.676Z",
               "EditorCaption": ""

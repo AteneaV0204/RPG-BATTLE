@@ -11,8 +11,10 @@ public partial class Mapa1 : Node2D
 	private Jugador jugador;
 	private Vector2I characterPosition;
 	private int trigo;
+	private int monedas;
     private AudioStreamPlayer2D cosechar;
 	private Label contador;
+	private Label monedero;
 
     public override void _Ready()
 	{
@@ -20,6 +22,8 @@ public partial class Mapa1 : Node2D
 		jugador = (Jugador)GetNode<CharacterBody2D>("Jugador");
         cosechar = GetNode<AudioStreamPlayer2D>("Cosechar");
         contador = GetNode<Label>("Jugador/Camera2D/Contador");
+        monedero = GetNode<Label>("Jugador/Camera2D/Monedero");
+		trigo = 0;
     }
 
 	public override void _Process(double delta)
@@ -91,6 +95,18 @@ public partial class Mapa1 : Node2D
             Vector2I nuevaFase = new((cordSemilla.X + i), cordSemilla.Y); //Cambia el aspecto de la planta para que crezca
             mapa.SetCell(capaSemillas, posPlanta, plantasID, nuevaFase);
         }
+
+		monedero.Text = jugador.GetMonedas().ToString();
     }
+
+	public int GetTrigo()
+	{
+		return trigo;
+	}
+
+	public void SetTrigo(int trigo)
+	{
+		this.trigo = trigo;
+	}
 
 }

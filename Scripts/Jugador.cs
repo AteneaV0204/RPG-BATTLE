@@ -11,6 +11,8 @@ public partial class Jugador : CharacterBody2D
 	private AnimationTree tree;
 	private CharacterBody2D characterBody;
 	private AudioStreamPlayer2D arar;
+	private int monedas;
+	private Tienda tienda;
 	
 	public override void _Ready()
 	{
@@ -53,6 +55,9 @@ public partial class Jugador : CharacterBody2D
 		characterPos = this.Position;
 	}
 
+	/// <summary>
+	/// Metodo para actualizar los parametros del AnimationTree
+	/// </summary>
 	private void ActualizarParametros()
 	{
 		if (velocity == Vector2.Zero)
@@ -85,9 +90,22 @@ public partial class Jugador : CharacterBody2D
 
 	}
 
+	/// <summary>
+	/// Getter para la posicion del personaje respecto al TileMap
+	/// </summary>
+	/// <returns>Posicion del personaje</returns>
 	public Vector2 GetCharacterPosition()
 	{
 		return characterPos;
 	}
 
+	public void JugadorVender()
+	{
+		monedas =+ tienda.GetBeneficios();
+	}
+
+	public int GetMonedas()
+	{
+		return monedas;
+	}
 }
