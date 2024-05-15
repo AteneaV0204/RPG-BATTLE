@@ -15,6 +15,7 @@ public partial class Mapa1 : Node2D
     private AudioStreamPlayer2D cosechar;
 	private Label contador;
 	private Label monedero;
+	private Area2D tienda;
 
     public override void _Ready()
 	{
@@ -23,7 +24,10 @@ public partial class Mapa1 : Node2D
         cosechar = GetNode<AudioStreamPlayer2D>("Cosechar");
         contador = GetNode<Label>("Jugador/Camera2D/Contador");
         monedero = GetNode<Label>("Jugador/Camera2D/Monedero");
+		tienda = GetNode<Area2D>("Tienda/Area2D");
 		trigo = 0;
+
+		tienda.BodyEntered += _OnTiendaEntered;
     }
 
 	public override void _Process(double delta)
@@ -77,6 +81,11 @@ public partial class Mapa1 : Node2D
 				GD.Print("Debes plantar trigo para cosecharlo");
 			}
 		}
+
+		if(Input.IsActionJustPressed("salir"))
+		{
+			GetTree().Quit();
+		}
 	}
 
 	/// <summary>
@@ -95,18 +104,28 @@ public partial class Mapa1 : Node2D
             Vector2I nuevaFase = new((cordSemilla.X + i), cordSemilla.Y); //Cambia el aspecto de la planta para que crezca
             mapa.SetCell(capaSemillas, posPlanta, plantasID, nuevaFase);
         }
-
-		monedero.Text = jugador.GetMonedas().ToString();
     }
 
-	public int GetTrigo()
+	/// <summary>
+	/// Evento ligado al nodo Area2D
+	/// </summary>
+	/// <param name="node">Nodo que entra en el area</param>
+	public void _OnTiendaEntered(Node2D node)
 	{
-		return trigo;
-	}
-
-	public void SetTrigo(int trigo)
-	{
-		this.trigo = trigo;
+		if (node.HasMethod("JugadorVender"))
+		{
+			if (trigo == 0)
+			{
+				GD.Print("No hay trigo para vender");
+			}
+			else
+			{
+				monedas += trigo * 10;
+				trigo = 0;
+				contador.Text = "= " + trigo;
+				monedero.Text = "= " + monedas.ToString();
+			}
+		}
 	}
 
 }

@@ -12,7 +12,6 @@ public partial class Jugador : CharacterBody2D
 	private CharacterBody2D characterBody;
 	private AudioStreamPlayer2D arar;
 	private int monedas;
-	private Tienda tienda;
 	
 	public override void _Ready()
 	{
@@ -101,11 +100,5 @@ public partial class Jugador : CharacterBody2D
 
 	public void JugadorVender()
 	{
-		monedas =+ tienda.GetBeneficios();
-	}
-
-	public int GetMonedas()
-	{
-		return monedas;
 	}
 }

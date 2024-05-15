@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bjbkhgjxx6lo5"]
+[gd_scene load_steps=22 format=3 uid="uid://bjbkhgjxx6lo5"]
 
 [ext_resource type="PackedScene" uid="uid://cch548rclwodb" path="res://Scenes/Jugador.tscn" id="1"]
 [ext_resource type="Texture2D" uid="uid://55t6cnsihb4g" path="res://Assets/Tilesets/Tilled_Dirt.png" id="1_1witk"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://cupgjndi83v5m" path="res://Assets/Objects/farmingTilesheetComplete.png" id="6_ndus0"]
 [ext_resource type="AudioStream" uid="uid://6gdh0r3cfh7d" path="res://Assets/Music/gentle-fields-194622.mp3" id="7_froyw"]
 [ext_resource type="AudioStream" uid="uid://dt87fmqdjjuw4" path="res://Assets/Music/cosechar.mp3" id="8_u4agh"]
-[ext_resource type="PackedScene" uid="uid://cccpmsolpoj1d" path="res://Scenes/tienda.tscn" id="10_fphyk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vbocw"]
 texture = ExtResource("2_ntgk6")
@@ -1162,6 +1161,24 @@ animations = [{
 "speed": 0.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kdyvn"]
+size = Vector2(37, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7qt2l"]
+atlas = ExtResource("6_ndus0")
+region = Rect2(0, 182, 34, 26)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h4it1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7qt2l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Mapa1" type="Node2D"]
 script = ExtResource("1_2mom7")
 
@@ -1193,18 +1210,18 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 275.0
-offset_top = -175.0
-offset_right = 319.0
-offset_bottom = -152.0
+offset_left = 264.0
+offset_top = -176.0
+offset_right = 308.0
+offset_bottom = -153.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 8
 size_flags_vertical = 8
-text = "= 0"
+text = " = 0"
 
 [node name="Trigo" type="AnimatedSprite2D" parent="Jugador/Camera2D"]
-position = Vector2(267, -163)
+position = Vector2(256, -164)
 sprite_frames = SubResource("SpriteFrames_f4874")
 animation = &"Trigo"
 
@@ -1214,18 +1231,18 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 275.0
-offset_top = -160.0
-offset_right = 319.0
-offset_bottom = -137.0
+offset_left = 265.0
+offset_top = -152.0
+offset_right = 309.0
+offset_bottom = -129.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 8
 size_flags_vertical = 8
-text = "= 0"
+text = " = 0"
 
 [node name="Dinero" type="AnimatedSprite2D" parent="Jugador/Camera2D"]
-position = Vector2(266, -148)
+position = Vector2(256, -140)
 sprite_frames = SubResource("SpriteFrames_f4874")
 animation = &"Dinero"
 
@@ -1238,8 +1255,15 @@ bus = &"Musica"
 stream = ExtResource("8_u4agh")
 attenuation = 0.353553
 
-[node name="Tienda" parent="." instance=ExtResource("10_fphyk")]
-z_index = 1
-position = Vector2(-165, -80)
+[node name="Tienda" type="StaticBody2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="Tienda"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tienda/Area2D"]
+position = Vector2(-0.5, -1.5)
+shape = SubResource("RectangleShape2D_kdyvn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Tienda"]
+sprite_frames = SubResource("SpriteFrames_h4it1")
 
 [connection signal="timeout" from="Timer" to="." method="_OnTimerTimeout"]
