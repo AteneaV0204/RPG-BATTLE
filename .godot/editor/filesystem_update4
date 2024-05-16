@@ -1,15 +1,3 @@
-res://default_env.tres
-res://Scenes/Mapa1.tscn
 res://Scripts/Jugador.cs
 res://Scripts/Mapa1.cs
 res://Scripts/Menu.cs
-res://Scenes/Jugador.tscn
-res://Scenes/MainMenu.tscn
-res://Scenes/tienda.tscn
-res://Scripts/Sfx.cs
-res://Scripts/ModoVentana.cs
-res://Scripts/OnClick.cs
-res://Scripts/Maestros.cs
-res://Scripts/Resolucion.cs
-res://Scenes/Tienda.cs
-res://Scripts/Musica.cs
