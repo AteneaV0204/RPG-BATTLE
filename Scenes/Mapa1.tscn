@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bjbkhgjxx6lo5"]
+[gd_scene load_steps=23 format=3 uid="uid://bjbkhgjxx6lo5"]
 
 [ext_resource type="PackedScene" uid="uid://cch548rclwodb" path="res://Scenes/Jugador.tscn" id="1"]
 [ext_resource type="Texture2D" uid="uid://55t6cnsihb4g" path="res://Assets/Tilesets/Tilled_Dirt.png" id="1_1witk"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cupgjndi83v5m" path="res://Assets/Objects/farmingTilesheetComplete.png" id="6_ndus0"]
 [ext_resource type="AudioStream" uid="uid://6gdh0r3cfh7d" path="res://Assets/Music/gentle-fields-194622.mp3" id="7_froyw"]
 [ext_resource type="AudioStream" uid="uid://dt87fmqdjjuw4" path="res://Assets/Music/cosechar.mp3" id="8_u4agh"]
+[ext_resource type="AudioStream" uid="uid://cwy5u6ot70xin" path="res://Assets/Music/error-126627.mp3" id="10_q0ybt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vbocw"]
 texture = ExtResource("2_ntgk6")
@@ -1254,6 +1255,10 @@ bus = &"Musica"
 [node name="Cosechar" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_u4agh")
 attenuation = 0.353553
+
+[node name="Error" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_q0ybt")
+volume_db = 10.166
 
 [node name="Tienda" type="StaticBody2D" parent="."]
 

@@ -13,6 +13,7 @@ public partial class Mapa1 : Node2D
 	private int trigo;
 	private int monedas;
     private AudioStreamPlayer2D cosechar;
+    private AudioStreamPlayer2D error;
 	private Label contador;
 	private Label monedero;
 	private Area2D tienda;
@@ -22,6 +23,7 @@ public partial class Mapa1 : Node2D
 		mapa = GetNode<TileMap>("TileMap");
 		jugador = (Jugador)GetNode<CharacterBody2D>("Jugador");
         cosechar = GetNode<AudioStreamPlayer2D>("Cosechar");
+        error = GetNode<AudioStreamPlayer2D>("Error");
         contador = GetNode<Label>("Jugador/Camera2D/Contador");
         monedero = GetNode<Label>("Jugador/Camera2D/Monedero");
 		tienda = GetNode<Area2D>("Tienda/Area2D");
@@ -54,6 +56,7 @@ public partial class Mapa1 : Node2D
 			else
 			{
 				GD.Print("No se puede plantar ahi"); //Convertir a popup
+				error.Play();
 			}
 			Vector2I cordSemilla = new(1, 0);
 			
@@ -78,8 +81,10 @@ public partial class Mapa1 : Node2D
             }
             else
 			{
-				GD.Print("Debes plantar trigo para cosecharlo");
-			}
+				GD.Print("Debes plantar trigo para cosecharlo"); //Convertir a popup
+                error.Play();
+
+            }
 		}
 
 		if(Input.IsActionJustPressed("salir"))
