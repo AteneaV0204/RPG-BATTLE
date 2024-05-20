@@ -1261,6 +1261,7 @@ stream = ExtResource("10_q0ybt")
 volume_db = 10.166
 
 [node name="Tienda" type="StaticBody2D" parent="."]
+position = Vector2(-48, -96)
 
 [node name="Area2D" type="Area2D" parent="Tienda"]
 
