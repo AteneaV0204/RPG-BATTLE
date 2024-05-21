@@ -306,11 +306,8 @@ autoplay = true
 bus = &"Musica"
 
 [connection signal="pressed" from="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/BtnJugar" to="CanvasLayer" method="_OnBtnJugarPressed"]
-[connection signal="pressed" from="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/BtnJugar" to="CanvasLayer" method="_OnClickSound"]
 [connection signal="pressed" from="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/BtnAjustes" to="CanvasLayer" method="_OnBtnAjustesPressed"]
-[connection signal="pressed" from="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/BtnAjustes" to="CanvasLayer" method="_OnClickSound"]
 [connection signal="button_down" from="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/BtnSalir" to="CanvasLayer" method="_OnBtnSalirPressed"]
-[connection signal="button_down" from="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/BtnSalir" to="CanvasLayer" method="_OnClickSound"]
 [connection signal="value_changed" from="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/MarginContainer/VBoxContainer/Maestros/VolMaestro" to="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/MarginContainer/VBoxContainer/Maestros" method="_OnVolMaestroValueChanged"]
 [connection signal="value_changed" from="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/MarginContainer/VBoxContainer/Musica/VolMusica" to="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/MarginContainer/VBoxContainer/Musica" method="_OnVolMaestroValueChanged"]
 [connection signal="value_changed" from="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/MarginContainer/VBoxContainer/Sfx/VolSfx" to="CanvasLayer/Ajustes/MarginContainer2/VBoxContainer/AjustesTab/TabContainer/Sonido/MarginContainer/VBoxContainer/Sfx" method="_OnVolMaestroValueChanged"]
